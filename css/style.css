@@ -1,0 +1,534 @@
+/*========================================================================================
+*********   ALL OF THE VARIABLES TYPE 
+*******     COLORS 
+*****       GRIDS
+***         
+*/
+/*========================================================================================*\
+*----------------------------               COLORE              ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+*** FLAT UI COLORS 
+**  flatuicolors.com/palette/defo
+*/
+/*--------------------------------
+*** GENERAL ATTRIBUTES 
+**
+*/
+/*--------------------------------
+***  WEPRODEV COLOR 
+**
+*/
+/*--------------------------------
+*** HEADER 
+**
+*/
+/*--------------------------------
+*** COLOR LINK 
+**
+*/
+/*--------------------------------
+*** CUSTOM COLOR
+**
+*/
+/*========================================================================================*\
+*----------------------------               GRIDS              ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+*** SUSY COLUMN 
+**  SET DIRECTION PROJECT , SET COLUMN NAME
+*/
+/*--------------------------------
+*** BREAKPOINTS
+**
+*/
+/*========================================================================================*\
+*----------------------------             DIRECTIONS            ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+***     AFTER SET DIRECTION 
+**      SET RIGHT AND LEFT 
+*/
+/*========================================================================================*\
+*----------------------------             Items module          ----------------------------        
+\*========================================================================================*/
+/*========================================================================================*\
+*----------------------------             COLUMN BOX            ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+*** CUSTOM COLOR
+**
+*/
+/*========================================================================================*\
+*----------------------------          column-box               ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+*** size varibles
+**
+*/
+/*--------------------------------
+*** color varibles
+**
+*/
+/*========================================================================================*\
+*----------------------------     simple responsive table       ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+*** colors varibles
+**
+*/
+/*--------------------------------
+*** styles varibles
+**
+*/
+/*========================================================================================*\
+*----------------------------          our-menu                 ----------------------------        
+\*========================================================================================*/
+/*========================================================================================*\
+*----------------------------      picture header              ----------------------------        
+\*========================================================================================*/
+/*========================================================================================*\
+*----------------------------      login and register          ----------------------------        
+\*========================================================================================*/
+/*========================================================================================
+*********   GRIDS BASE SUSY
+*******     MEDIA QUERY 
+*****       
+***         
+*/
+/*--------------------------------
+***  GENERAL DIFINITIONS
+**	 COMPASS , SUSY , CSS3 , CLEARFIX
+*/
+@import url(lib/normalize.css);
+/* line 5, ../../../../../var/lib/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../var/lib/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../var/lib/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../var/lib/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../var/lib/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../var/lib/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../var/lib/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../var/lib/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../var/lib/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 21, ../scss/_media-query.scss */
+.container {
+  width: 90%;
+}
+
+/*========================================================================================*\
+*----------------------------          MEDIA QUERY              ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+	*** 4K AND HIGH RESOULOTIONS 
+	**	MIN-WIDTH : 2560px OR 160em
+	*/
+/*--------------------------------
+	*** LAPTOP OR DESKTOP 
+	**	MIN-WIDTH : 1400px OR 87.5em
+	*/
+/*--------------------------------
+	*** FOR SOM OF THE DEVICES
+	**	MIN-WIDTH : 1201px OR 75.0625em
+	*/
+/*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1200px OR 75em
+	*/
+/*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1024px OR 64em
+	*/
+/*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
+/*--------------------------------
+	*** FOR RETINA MOBILE AND LANSCAPE
+	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+	*/
+/*--------------------------------
+	*** FOR MOBILE
+	**	MAX : 640PX / 40em
+	*/
+/*--------------------------------
+	*** FOR MINI MOBILE
+	**	MAX : 400PX / 25em
+	*/
+/*========================================================================================
+*********   GRIDS COL
+*******     MEDIA QUERY 
+*****       
+***         
+*/
+/* line 7, ../scss/_grid.scss */
+.row {
+  width: 100%;
+  display: block;
+  clear: both;
+}
+
+@media screen and (min-width: 75.0625em) {
+  /* line 29, ../scss/_grid.scss */
+  .col-xl-1 {
+    width: 8.33333%;
+    float: left;
+  }
+
+  /* line 29, ../scss/_grid.scss */
+  .col-xl-2 {
+    width: 16.66667%;
+    float: left;
+  }
+
+  /* line 29, ../scss/_grid.scss */
+  .col-xl-3 {
+    width: 25%;
+    float: left;
+  }
+
+  /* line 29, ../scss/_grid.scss */
+  .col-xl-4 {
+    width: 33.33333%;
+    float: left;
+  }
+
+  /* line 29, ../scss/_grid.scss */
+  .col-xl-5 {
+    width: 41.66667%;
+    float: left;
+  }
+
+  /* line 29, ../scss/_grid.scss */
+  .col-xl-6 {
+    width: 50%;
+    float: left;
+  }
+
+  /* line 29, ../scss/_grid.scss */
+  .col-xl-7 {
+    width: 58.33333%;
+    float: left;
+  }
+
+  /* line 29, ../scss/_grid.scss */
+  .col-xl-8 {
+    width: 66.66667%;
+    float: left;
+  }
+
+  /* line 29, ../scss/_grid.scss */
+  .col-xl-9 {
+    width: 75%;
+    float: left;
+  }
+
+  /* line 29, ../scss/_grid.scss */
+  .col-xl-10 {
+    width: 83.33333%;
+    float: left;
+  }
+
+  /* line 29, ../scss/_grid.scss */
+  .col-xl-11 {
+    width: 91.66667%;
+    float: left;
+  }
+
+  /* line 29, ../scss/_grid.scss */
+  .col-xl-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media screen and (max-width: 75em) {
+  /* line 41, ../scss/_grid.scss */
+  .col-lg-1 {
+    width: 8.33333%;
+    float: left;
+  }
+
+  /* line 41, ../scss/_grid.scss */
+  .col-lg-2 {
+    width: 16.66667%;
+    float: left;
+  }
+
+  /* line 41, ../scss/_grid.scss */
+  .col-lg-3 {
+    width: 25%;
+    float: left;
+  }
+
+  /* line 41, ../scss/_grid.scss */
+  .col-lg-4 {
+    width: 33.33333%;
+    float: left;
+  }
+
+  /* line 41, ../scss/_grid.scss */
+  .col-lg-5 {
+    width: 41.66667%;
+    float: left;
+  }
+
+  /* line 41, ../scss/_grid.scss */
+  .col-lg-6 {
+    width: 50%;
+    float: left;
+  }
+
+  /* line 41, ../scss/_grid.scss */
+  .col-lg-7 {
+    width: 58.33333%;
+    float: left;
+  }
+
+  /* line 41, ../scss/_grid.scss */
+  .col-lg-8 {
+    width: 66.66667%;
+    float: left;
+  }
+
+  /* line 41, ../scss/_grid.scss */
+  .col-lg-9 {
+    width: 75%;
+    float: left;
+  }
+
+  /* line 41, ../scss/_grid.scss */
+  .col-lg-10 {
+    width: 83.33333%;
+    float: left;
+  }
+
+  /* line 41, ../scss/_grid.scss */
+  .col-lg-11 {
+    width: 91.66667%;
+    float: left;
+  }
+
+  /* line 41, ../scss/_grid.scss */
+  .col-lg-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media screen and (max-width: 62em) {
+  /* line 53, ../scss/_grid.scss */
+  .col-md-1 {
+    width: 8.33333%;
+    float: left;
+  }
+
+  /* line 53, ../scss/_grid.scss */
+  .col-md-2 {
+    width: 16.66667%;
+    float: left;
+  }
+
+  /* line 53, ../scss/_grid.scss */
+  .col-md-3 {
+    width: 25%;
+    float: left;
+  }
+
+  /* line 53, ../scss/_grid.scss */
+  .col-md-4 {
+    width: 33.33333%;
+    float: left;
+  }
+
+  /* line 53, ../scss/_grid.scss */
+  .col-md-5 {
+    width: 41.66667%;
+    float: left;
+  }
+
+  /* line 53, ../scss/_grid.scss */
+  .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+
+  /* line 53, ../scss/_grid.scss */
+  .col-md-7 {
+    width: 58.33333%;
+    float: left;
+  }
+
+  /* line 53, ../scss/_grid.scss */
+  .col-md-8 {
+    width: 66.66667%;
+    float: left;
+  }
+
+  /* line 53, ../scss/_grid.scss */
+  .col-md-9 {
+    width: 75%;
+    float: left;
+  }
+
+  /* line 53, ../scss/_grid.scss */
+  .col-md-10 {
+    width: 83.33333%;
+    float: left;
+  }
+
+  /* line 53, ../scss/_grid.scss */
+  .col-md-11 {
+    width: 91.66667%;
+    float: left;
+  }
+
+  /* line 53, ../scss/_grid.scss */
+  .col-md-12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media screen and (max-width: 47.9375em) {
+  /* line 65, ../scss/_grid.scss */
+  .col-sm-1 {
+    width: 8.33333%;
+    float: left;
+  }
+
+  /* line 65, ../scss/_grid.scss */
+  .col-sm-2 {
+    width: 16.66667%;
+    float: left;
+  }
+
+  /* line 65, ../scss/_grid.scss */
+  .col-sm-3 {
+    width: 25%;
+    float: left;
+  }
+
+  /* line 65, ../scss/_grid.scss */
+  .col-sm-4 {
+    width: 33.33333%;
+    float: left;
+  }
+
+  /* line 65, ../scss/_grid.scss */
+  .col-sm-5 {
+    width: 41.66667%;
+    float: left;
+  }
+
+  /* line 65, ../scss/_grid.scss */
+  .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+
+  /* line 65, ../scss/_grid.scss */
+  .col-sm-7 {
+    width: 58.33333%;
+    float: left;
+  }
+
+  /* line 65, ../scss/_grid.scss */
+  .col-sm-8 {
+    width: 66.66667%;
+    float: left;
+  }
+
+  /* line 65, ../scss/_grid.scss */
+  .col-sm-9 {
+    width: 75%;
+    float: left;
+  }
+
+  /* line 65, ../scss/_grid.scss */
+  .col-sm-10 {
+    width: 83.33333%;
+    float: left;
+  }
+
+  /* line 65, ../scss/_grid.scss */
+  .col-sm-11 {
+    width: 91.66667%;
+    float: left;
+  }
+
+  /* line 65, ../scss/_grid.scss */
+  .col-sm-12 {
+    width: 100%;
+    float: left;
+  }
+}
+/* line 1, ../scss/modules/_index.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 6, ../scss/modules/_index.scss */
+body {
+  background-color: red;
+}
+@media screen and (max-width: 64em) {
+  /* line 6, ../scss/modules/_index.scss */
+  body {
+    background-color: orange;
+  }
+}
