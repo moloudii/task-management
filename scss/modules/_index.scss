@@ -38,10 +38,10 @@ body{
                     }
                 }
                 .name-user{
-                    font-size: 1em;
-                    line-height: 2.5;
+                    font-size   : 1em;
+                    line-height : 2.5;
                     padding-left: 0.4em;
-                    float: left;
+                    float       : left;
                 }
             }//user
             .date{
@@ -61,97 +61,96 @@ body{
             height      : 90%;
             // border      : 1px solid red;
             .keeper{
-                height: 100%;
+                height  : 100%;
                 .column-task{
-                    height          : 100%;
-                    width: 98%;
-                    float: left;
+                    height  : 100%;
+                    width   : 98%;
+                    float   : left;
                     &:last-child{
-                        margin-right: 0em;
+                        margin-right    : 0em;
                     }
                     .header-column-day{
-                        height: 3em;
+                        height          : 3em;
                         background-image: linear-gradient(64deg ,#99d0fb,#4c8ac7);
-                        border-radius: 0.5em 0.5em 0em 0em;
-                        padding: 1em;
+                        border-radius   : 0.5em 0.5em 0em 0em;
+                        padding         : 1em;
                         h3{
-                            font-size: 1.3em;  
-                            font-weight: 600;
-                            color: $WHITE;
+                            font-size   : 1.3em;  
+                            font-weight : 600;
+                            color       : $WHITE;
                         }
-                    }
+                    }//header-column-day
                     .header-column-week{
-                        height: 3em;
+                        height          : 3em;
                         background-image: linear-gradient(64deg ,#f599fb,#9e0aac);
-                        border-radius: 0.5em 0.5em 0em 0em;
-                        padding: 1em;
+                        border-radius   : 0.5em 0.5em 0em 0em;
+                        padding         : 1em;
                         h3{
-                            font-size: 1.3em;  
-                            font-weight: 600;
-                            color: $WHITE;
+                            font-size   : 1.3em;  
+                            font-weight : 600;
+                            color       : $WHITE;
                         }
-                    }
+                    }//header-column-week
                     .header-column-month{
-                        height: 3em;
+                        height          : 3em;
                         background-image: linear-gradient(64deg ,#999ffb,#0a0a9f);
-                        border-radius: 0.5em 0.5em 0em 0em;
-                        padding: 1em;
+                        border-radius   : 0.5em 0.5em 0em 0em;
+                        padding         : 1em;
                         h3{
-                            font-size: 1.3em;  
-                            font-weight: 600;
-                            color: $WHITE;
+                            font-size   : 1.3em;  
+                            font-weight : 600;
+                            color       : $WHITE;
                         }
-                    }
+                    }//header-column-month
                     .task-card-section{
-                        height: 87%;
-                        padding: 0.7em;
-                        overflow-y: scroll;
-                        border: 1px solid rgba($color: $SILVER, $alpha: 0.5);
+                        height      : 87%;
+                        overflow-y  : scroll;
+                        border      : 1px solid rgba($color: $SILVER, $alpha: 0.5);
                         .card-task{
-                            width: 100%;
-                            border: 1px solid rgba($color: $CLOUDS, $alpha: 0.5);
-                            border-radius: 0.3em;
+                            // width: 100%;
+                            border          : 1px solid rgba($color: $CLOUDS, $alpha: 0.5);
+                            border-radius   : 0.3em;
                             background-color: $WHITE;
-                            box-shadow: 0em 0.2em 1em $SILVER;
-                            margin-bottom: 0.7em;
-                            cursor: pointer;
+                            box-shadow      : 0em 0.2em 1em $SILVER;
+                            margin          : 0.7em;
+                            cursor          : pointer;
                             .text-card-task{
-                                min-height: 8em;
-                                padding: 0.5em 1em;
+                                min-height  : 8em;
+                                padding     : 0.5em 1em;
                                 .title-task{
-                                    font-weight: 600;
-                                    line-height: 2;
-                                    display: block;
+                                    font-weight : 600;
+                                    line-height : 2;
+                                    display     : block;
                                 }
                                 .description-task{
-                                    font-size: 0.9em;
-                                    color: $ASBESTOS;
-                                    line-height: 1.7;
-                                    margin-top: 0.5em;
+                                    font-size   : 0.9em;
+                                    color       : $ASBESTOS;
+                                    line-height : 1.7;
+                                    margin-top  : 0.5em;
                                 }
-                            }
+                            }//text-card-task
                             .operation-card-task{
-                                width: 100%;
-                                border-top: 1px solid rgba($color: $SILVER, $alpha: 0.5);
-                                margin: 0;
-                                padding: 0.5em 1em;
-                                overflow: hidden;
+                                width       : 100%;
+                                border-top  : 1px solid rgba($color: $SILVER, $alpha: 0.5);
+                                margin      : 0;
+                                padding     : 0.5em 1em;
+                                overflow    : hidden;
                                 .start{
-                                    height: 100%;
-                                    width: 5em;
-                                    line-height: 1.5;
-                                    font-size: 1.1em;
-                                    float: left;
-                                    margin-top: 0.2em;
+                                    height      : 100%;
+                                    width       : 5em;
+                                    line-height : 1.5;
+                                    font-size   : 1.1em;
+                                    float       : left;
+                                    margin-top  : 0.2em;
                                 }
                                 .start-time{
-                                    line-height: 1.5;
-                                    font-size: 1.1em;
-                                    display: inline-block;
-                                    margin-top: 0.2em;
+                                    line-height : 1.5;
+                                    font-size   : 1.1em;
+                                    display     : inline-block;
+                                    margin-top  : 0.2em;
                                 }
                                 .user{
-                                    float: right;
+                                    float           : right;
                                     height          : 2em;
                                     overflow        : hidden;
                                     .icon-user{
@@ -169,49 +168,170 @@ body{
                                             left        : 50%;
                                             transform   : translate(-50%, -50%);   
                                         }
-                                    }
-                                }
-                            }
+                                    }//icon-user
+                                }//user
+                            }//operation-card-task
+                        }//card-task
+                    }//task-card-section
+                    .split-date{
+                        border-top  : 1px solid rgba($color: $SILVER, $alpha: 0.5);
+                        display     : block;
+                        position    : relative;
+                        margin      : 1.2em 0em;
+                        &::before{
+                            position        : absolute;
+                            left            : 50%;
+                            top             : 50%;
+                            transform       : translate(-50%, -50%);   
+                            background-color:  $CLOUDS;
+                            padding         : 0.5em 1em;
+                            font-size       : 0.8em;
+                            border-radius   : 2em;
+                        }
+                    }//split-date
+/*========================================================================================
+*********   CLASS FOR MONTH {SPLIT MONTH}
+*******     
+***         
+*/
+                    .january{
+                        &::before{
+                            content: 'january';
+                        }
+                    }
+                    .february{
+                        &::before{
+                            content: 'february';
+                        }
+                    }
+                    .march{
+                        &::before{
+                            content: 'march';
+                        }
+                    }
+                    .april{
+                        &::before{
+                            content: 'april';
+                        }
+                    }
+                    .may{
+                        &::before{
+                            content: 'may';
+                        }
+                    }
+                    .june{
+                        &::before{
+                            content: 'june';
+                        }
+                    }
+                    .july{
+                        &::before{
+                            content: 'july';
+                        }
+                    }
+                    .august{
+                        &::before{
+                            content: 'august';
+                        }
+                    }
+                    .september{
+                        &::before{
+                            content: 'september';
+                        }
+                    }
+                    .october{
+                        &::before{
+                            content: 'october';
+                        }
+                    }
+                    .november{
+                        &::before{
+                            content: 'november';
+                        }
+                    }
+                    .december{
+                        &::before{
+                            content: 'december';
+                        }
+                    }
+/*========================================================================================
+*********   CLASS FOR DAY {SPLIT DAY}
+*******     
+***         
+*/
+                    .sunday{
+                        &::before{
+                            content: 'sunday';
+                        }
+                    }
+                    .monday{
+                        &::before{
+                            content: 'monday';
+                        }
+                    }
+                    .tuesday{
+                        &::before{
+                            content: 'tuesday';
+                        }
+                    }
+                    .wednesday{
+                        &::before{
+                            content: 'wednesday';
+                        }
+                    }
+                    .thursday{
+                        &::before{
+                            content: 'thursday';
+                        }
+                    }
+                    .friday{
+                        &::before{
+                            content: 'friday';
+                        }
+                    }
+                    .saturday{
+                        &::before{
+                            content: 'saturday';
                         }
                     }
                     .footer-column{
-                        width: 100%;
-                        height: 7%;
-                        border: 1px solid rgba($color: $SILVER, $alpha: 0.5);
-                        border-top: none;
-                        padding: 0.7em;
+                        width       : 100%;
+                        height      : 7%;
+                        border      : 1px solid rgba($color: $SILVER, $alpha: 0.5);
+                        border-top  : none;
+                        padding     : 0.7em;
                         .add-card{
-                            width: 7em;
-                            height: 2.2em;
-                            border-radius: 0.2em;
-                            font-size: 1em;
-                            cursor: pointer;
-                            border: none;
-                            color: $WHITE;
-                            transition: all 0.3s;
-                        }
+                            width           : 7em;
+                            height          : 2.2em;
+                            border-radius   : 0.2em;
+                            font-size       : 1em;
+                            cursor          : pointer;
+                            border          : none;
+                            color           : $WHITE;
+                            transition      : all 0.3s;
+                        }//add-card
                         .add-card-day{
-                            background-image: linear-gradient(64deg ,#99d0fb,#4c8ac7);
+                            background-image    : linear-gradient(64deg ,#99d0fb,#4c8ac7);
                             &:hover{
-                                background-image: linear-gradient(64deg ,#46aaf7,#2678c9);
-                                box-shadow: 0em 0.2em 1em #99d0fb;
+                                background-image    : linear-gradient(64deg ,#46aaf7,#2678c9);
+                                box-shadow          : 0em 0.2em 1em #99d0fb;
                             }
-                        }
+                        }//add-card-day
                         .add-card-week{
-                            background-image: linear-gradient(64deg ,#f599fb,#9e0aac);
+                            background-image    : linear-gradient(64deg ,#f599fb,#9e0aac);
                             &:hover{
-                                background-image: linear-gradient(64deg ,#f064fa,#64016d);
-                                box-shadow: 0em 0.2em 1em #f064fa;
+                                background-image    : linear-gradient(64deg ,#f064fa,#64016d);
+                                box-shadow          : 0em 0.2em 1em #f064fa;
                             }
-                        }
+                        }//add-card-week
                         .add-card-month{
-                            background-image: linear-gradient(64deg ,#999ffb,#0a0a9f);
+                            background-image    : linear-gradient(64deg ,#999ffb,#0a0a9f);
                             &:hover{
-                                background-image: linear-gradient(64deg ,#5e68f7,#040466);
-                                box-shadow: 0em 0.2em 1em #5e68f7;
+                                background-image    : linear-gradient(64deg ,#5e68f7,#040466);
+                                box-shadow          : 0em 0.2em 1em #5e68f7;
                             }
-                        }
-                    }
+                        }//add-card-month
+                    }//footer-column
                 }//column-task
             }//keeper
         }//columns-section
