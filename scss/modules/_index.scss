@@ -141,16 +141,19 @@ body{
             height      : 90%;
             padding     : 1em;
             @include tablet{
-                overflow: inherit;
+                overflow: scroll;
                 height  : 80%;
                 position: absolute;
-                top     : 11em;
+                top     : 10em;
             }
             .keeper{
                 height  : 100%;
                 @include tablet{
                     height: auto;
                     margin-bottom: 2em;
+                }
+                &:last-child{
+                    margin-bottom   : 0em;
                 }
                 .column-task{
                     height  : 100%;
@@ -168,7 +171,6 @@ body{
                         margin-right    : 0em;
                         @include tablet{
                             margin-right    : auto;
-                            margin-bottom   : 1em;
                         }
                     }
                     .header-column-day{

@@ -32,8 +32,8 @@
                     <div class="header-column-day" id="header-column-day">
                         <h3>Day</h3>
                     </div>
-                    <div class="task-card-section">
-                        <div class="card-task">
+                    <div class="task-card-section" id="divDay" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="day-1">
                             <div class="text-card-task">
                                 <h4 class="title-task">Name Task</h4>
                                 <p class="description-task">
@@ -54,7 +54,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-task">
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="day-2">
                             <div class="text-card-task">
                                 <h4 class="title-task">Name Task</h4>
                                 <p class="description-task">
@@ -75,7 +75,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-task">
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="day-3">
                             <div class="text-card-task">
                                 <h4 class="title-task">Name Task</h4>
                                 <p class="description-task">
@@ -96,7 +96,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-task">
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="day-4">
                             <div class="text-card-task">
                                 <h4 class="title-task">Name Task</h4>
                                 <p class="description-task">
@@ -129,9 +129,9 @@
                     <div class="header-column-week" id="header-column-week">
                         <h3>Week</h3>
                     </div>
-                    <div class="task-card-section">
+                    <div class="task-card-section" id="divWeek" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
                         <span class="split-date sunday"></span>
-                        <div class="card-task">
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="week-1">
                             <div class="text-card-task">
                                 <h4 class="title-task">Name Task</h4>
                                 <p class="description-task">
@@ -164,9 +164,9 @@
                     <div class="header-column-month" id="header-column-month">
                         <h3>Month</h3>
                     </div>
-                    <div class="task-card-section">
+                    <div class="task-card-section" id="divMonth" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
                         <span class="split-date second-week"></span>
-                        <div class="card-task">
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="month-1">
                             <div class="text-card-task">
                                 <h4 class="title-task">Name Task</h4>
                                 <p class="description-task">
@@ -189,7 +189,7 @@
                         </div>
                         <span class="split-date second-week"></span>
 
-                        <div class="card-task">
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="month-2">
                             <div class="text-card-task">
                                 <h4 class="title-task">Name Task</h4>
                                 <p class="description-task">

@@ -22,3 +22,14 @@ $(document).ready(function () {
         )
     });
 });
+function allowDrop(ev){
+    ev.preventDefault();
+}
+function dragCardTask(ev){
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+function dropCardTask(ev){
+    ev.preventDefault();
+    let data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
