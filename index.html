@@ -19,12 +19,17 @@
             </div>
             <div class="date">10/25/2001</div>
         </div>
+
+        <div class="shortcut">
+            <a href="#header-column-day" class="link-shortcut">Day</a>
+            <a href="#header-column-week" class="link-shortcut">Week</a>
+            <a href="#header-column-month" class="link-shortcut">Month</a>
+        </div>
+
         <div class=" columns-section row">
-
-
-            <div class="col-xl-4 keeper">
+            <div class="col-xl-4 col-lg-4 col-md-12 keeper">
                 <div class="column-task">
-                    <div class="header-column-day">
+                    <div class="header-column-day" id="header-column-day">
                         <h3>Day</h3>
                     </div>
                     <div class="task-card-section">
@@ -119,12 +124,13 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 keeper">
+            <div class="col-xl-4 col-lg-4 col-md-12 keeper">
                 <div class="column-task">
-                    <div class="header-column-week">
-                        <h3>Day</h3>
+                    <div class="header-column-week" id="header-column-week">
+                        <h3>Week</h3>
                     </div>
                     <div class="task-card-section">
+                        <span class="split-date sunday"></span>
                         <div class="card-task">
                             <div class="text-card-task">
                                 <h4 class="title-task">Name Task</h4>
@@ -146,7 +152,6 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="split-date sunday"></span>
                     </div>
                     <div class="footer-column">
                         <input type="submit" class="add-card add-card-week">
@@ -154,12 +159,13 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 keeper ">
+            <div class="col-xl-4 col-lg-4 col-md-12 keeper ">
                 <div class="column-task w-100">
-                    <div class="header-column-month">
-                        <h3>Day</h3>
+                    <div class="header-column-month" id="header-column-month">
+                        <h3>Month</h3>
                     </div>
                     <div class="task-card-section">
+                        <span class="split-date second-week"></span>
                         <div class="card-task">
                             <div class="text-card-task">
                                 <h4 class="title-task">Name Task</h4>
@@ -181,7 +187,7 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="split-date july"></span>
+                        <span class="split-date second-week"></span>
 
                         <div class="card-task">
                             <div class="text-card-task">
@@ -213,6 +219,8 @@
 
         </div>
     </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

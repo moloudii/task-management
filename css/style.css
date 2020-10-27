@@ -8105,21 +8105,48 @@ readers do not read off random characters that represent icons */
 .w-100 {
   width: 100% !important;
 }
+@media screen and (max-width: 62em) {
+  /* line 6, ../scss/modules/_index.scss */
+  .w-100 {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 40em) {
+  /* line 6, ../scss/modules/_index.scss */
+  .w-100 {
+    width: 100% !important;
+  }
+}
 
-/* line 9, ../scss/modules/_index.scss */
+/* line 15, ../scss/modules/_index.scss */
+html {
+  scroll-behavior: smooth;
+}
+
+/* line 18, ../scss/modules/_index.scss */
 body {
   font-family: 'Poppins';
 }
-/* line 11, ../scss/modules/_index.scss */
+/* line 20, ../scss/modules/_index.scss */
 body .task-page {
-  padding: 1em;
   height: 100vh;
 }
-/* line 14, ../scss/modules/_index.scss */
+/* line 22, ../scss/modules/_index.scss */
 body .task-page .user-date {
   height: 10%;
+  padding: 1em;
+  background-color: white;
+  position: sticky;
+  z-index: 100;
 }
-/* line 17, ../scss/modules/_index.scss */
+@media screen and (max-width: 62em) {
+  /* line 22, ../scss/modules/_index.scss */
+  body .task-page .user-date {
+    height: 4.5em;
+    position: fixed;
+  }
+}
+/* line 32, ../scss/modules/_index.scss */
 body .task-page .user-date .user {
   float: left;
   height: 2.5em;
@@ -8127,8 +8154,31 @@ body .task-page .user-date .user {
   border-radius: 2em;
   background-color: #ecf0f1;
   overflow: hidden;
+  cursor: pointer;
 }
-/* line 24, ../scss/modules/_index.scss */
+@media screen and (max-width: 40em) {
+  /* line 32, ../scss/modules/_index.scss */
+  body .task-page .user-date .user {
+    padding-right: 0em;
+  }
+  /* line 42, ../scss/modules/_index.scss */
+  body .task-page .user-date .user .name-user {
+    display: none;
+  }
+}
+/* line 46, ../scss/modules/_index.scss */
+body .task-page .user-date .user:hover {
+  box-shadow: 0em 0.2em 1em #bdc3c7;
+}
+/* line 48, ../scss/modules/_index.scss */
+body .task-page .user-date .user:hover .icon-user {
+  font-size: 1.4em;
+}
+/* line 51, ../scss/modules/_index.scss */
+body .task-page .user-date .user:hover .name-user {
+  font-size: 1.1em;
+}
+/* line 55, ../scss/modules/_index.scss */
 body .task-page .user-date .user .icon-user {
   background-color: #2980b9;
   color: white;
@@ -8138,22 +8188,24 @@ body .task-page .user-date .user .icon-user {
   font-size: 1.3em;
   position: relative;
   float: left;
+  transition: all 0.3s;
 }
-/* line 33, ../scss/modules/_index.scss */
+/* line 65, ../scss/modules/_index.scss */
 body .task-page .user-date .user .icon-user::before {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 40, ../scss/modules/_index.scss */
+/* line 72, ../scss/modules/_index.scss */
 body .task-page .user-date .user .name-user {
   font-size: 1em;
   line-height: 2.5;
   padding-left: 0.4em;
   float: left;
+  transition: all 0.3s;
 }
-/* line 47, ../scss/modules/_index.scss */
+/* line 80, ../scss/modules/_index.scss */
 body .task-page .user-date .date {
   float: right;
   height: 2.5em;
@@ -8164,17 +8216,89 @@ body .task-page .user-date .date {
   color: white;
   text-align: center;
   letter-spacing: 0.1em;
+  transition: all 0.3s;
+  cursor: pointer;
 }
-/* line 59, ../scss/modules/_index.scss */
+/* line 92, ../scss/modules/_index.scss */
+body .task-page .user-date .date:hover {
+  font-size: 1.1em;
+  box-shadow: 0em 0.2em 1em #bdc3c7;
+}
+/* line 98, ../scss/modules/_index.scss */
+body .task-page .shortcut {
+  display: none;
+  text-align: center;
+}
+@media screen and (max-width: 62em) {
+  /* line 98, ../scss/modules/_index.scss */
+  body .task-page .shortcut {
+    display: block;
+    height: 5.5em;
+    width: 100%;
+    clear: both;
+    box-shadow: 0em 0.7em 1em rgba(189, 195, 199, 0.5);
+    position: fixed;
+    top: 4.5em;
+    background-color: white;
+    padding: 0.4em 0em;
+    z-index: 100;
+  }
+  /* line 112, ../scss/modules/_index.scss */
+  body .task-page .shortcut .link-shortcut {
+    border-radius: 0.2em 0.2em 0.2em 0.2em;
+    height: 100%;
+    width: 4em;
+    display: inline-block;
+    background-color: #A687FC;
+    color: white;
+    text-decoration: none;
+    padding-top: 2em;
+    font-size: 1em;
+    font-weight: 600;
+    margin-right: 0.5em;
+    border-radius: 0.2em 0.2em 0.2em 0.2em;
+    transition: all 0.3s;
+  }
+  /* line 125, ../scss/modules/_index.scss */
+  body .task-page .shortcut .link-shortcut:hover {
+    border-radius: 0.6em;
+    box-shadow: 0.2em 0em 0.7em #A687FC;
+  }
+  /* line 129, ../scss/modules/_index.scss */
+  body .task-page .shortcut .link-shortcut:focus {
+    background-color: white;
+    color: #A687FC;
+    box-shadow: 0em 0em 0.7em #A687FC;
+    border-radius: 0.3em 0.3em 0em 0.3em;
+  }
+}
+/* line 139, ../scss/modules/_index.scss */
 body .task-page .columns-section {
   overflow: hidden;
   height: 90%;
+  padding: 1em;
 }
-/* line 63, ../scss/modules/_index.scss */
+@media screen and (max-width: 62em) {
+  /* line 139, ../scss/modules/_index.scss */
+  body .task-page .columns-section {
+    overflow: inherit;
+    height: 80%;
+    position: absolute;
+    top: 11em;
+  }
+}
+/* line 149, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper {
   height: 100%;
 }
-/* line 65, ../scss/modules/_index.scss */
+@media screen and (max-width: 62em) {
+  /* line 149, ../scss/modules/_index.scss */
+  body .task-page .columns-section .keeper {
+    height: auto;
+    margin-bottom: 2em;
+  }
+}
+/* line 155, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task {
   height: 100%;
   width: 98%;
@@ -8190,56 +8314,77 @@ body .task-page .columns-section .keeper .column-task {
   ***         
   */
 }
-/* line 69, ../scss/modules/_index.scss */
+@media screen and (max-width: 62em) {
+  /* line 155, ../scss/modules/_index.scss */
+  body .task-page .columns-section .keeper .column-task {
+    width: 80%;
+    margin-left: auto;
+    float: none;
+  }
+}
+@media screen and (max-width: 40em) {
+  /* line 155, ../scss/modules/_index.scss */
+  body .task-page .columns-section .keeper .column-task {
+    width: 100%;
+  }
+}
+/* line 167, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task:last-child {
   margin-right: 0em;
 }
-/* line 72, ../scss/modules/_index.scss */
+@media screen and (max-width: 62em) {
+  /* line 167, ../scss/modules/_index.scss */
+  body .task-page .columns-section .keeper .column-task:last-child {
+    margin-right: auto;
+    margin-bottom: 1em;
+  }
+}
+/* line 174, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .header-column-day {
   height: 3em;
   background-image: linear-gradient(64deg, #99d0fb, #4c8ac7);
   border-radius: 0.5em 0.5em 0em 0em;
   padding: 1em;
 }
-/* line 77, ../scss/modules/_index.scss */
+/* line 179, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .header-column-day h3 {
   font-size: 1.3em;
   font-weight: 600;
   color: white;
 }
-/* line 83, ../scss/modules/_index.scss */
+/* line 185, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .header-column-week {
   height: 3em;
   background-image: linear-gradient(64deg, #f599fb, #9e0aac);
   border-radius: 0.5em 0.5em 0em 0em;
   padding: 1em;
 }
-/* line 88, ../scss/modules/_index.scss */
+/* line 190, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .header-column-week h3 {
   font-size: 1.3em;
   font-weight: 600;
   color: white;
 }
-/* line 94, ../scss/modules/_index.scss */
+/* line 196, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .header-column-month {
   height: 3em;
   background-image: linear-gradient(64deg, #999ffb, #0a0a9f);
   border-radius: 0.5em 0.5em 0em 0em;
   padding: 1em;
 }
-/* line 99, ../scss/modules/_index.scss */
+/* line 201, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .header-column-month h3 {
   font-size: 1.3em;
   font-weight: 600;
   color: white;
 }
-/* line 105, ../scss/modules/_index.scss */
+/* line 207, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section {
   height: 87%;
   overflow-y: scroll;
   border: 1px solid rgba(189, 195, 199, 0.5);
 }
-/* line 109, ../scss/modules/_index.scss */
+/* line 211, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section .card-task {
   border: 1px solid rgba(236, 240, 241, 0.5);
   border-radius: 0.3em;
@@ -8248,25 +8393,25 @@ body .task-page .columns-section .keeper .column-task .task-card-section .card-t
   margin: 0.7em;
   cursor: pointer;
 }
-/* line 117, ../scss/modules/_index.scss */
+/* line 219, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section .card-task .text-card-task {
   min-height: 8em;
   padding: 0.5em 1em;
 }
-/* line 120, ../scss/modules/_index.scss */
+/* line 222, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section .card-task .text-card-task .title-task {
   font-weight: 600;
   line-height: 2;
   display: block;
 }
-/* line 125, ../scss/modules/_index.scss */
+/* line 227, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section .card-task .text-card-task .description-task {
   font-size: 0.9em;
   color: #7f8c8d;
   line-height: 1.7;
   margin-top: 0.5em;
 }
-/* line 132, ../scss/modules/_index.scss */
+/* line 234, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section .card-task .operation-card-task {
   width: 100%;
   border-top: 1px solid rgba(189, 195, 199, 0.5);
@@ -8274,7 +8419,7 @@ body .task-page .columns-section .keeper .column-task .task-card-section .card-t
   padding: 0.5em 1em;
   overflow: hidden;
 }
-/* line 138, ../scss/modules/_index.scss */
+/* line 240, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section .card-task .operation-card-task .start {
   height: 100%;
   width: 5em;
@@ -8283,20 +8428,20 @@ body .task-page .columns-section .keeper .column-task .task-card-section .card-t
   float: left;
   margin-top: 0.2em;
 }
-/* line 146, ../scss/modules/_index.scss */
+/* line 248, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section .card-task .operation-card-task .start-time {
   line-height: 1.5;
   font-size: 1.1em;
   display: inline-block;
   margin-top: 0.2em;
 }
-/* line 152, ../scss/modules/_index.scss */
+/* line 254, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section .card-task .operation-card-task .user {
   float: right;
   height: 2em;
   overflow: hidden;
 }
-/* line 156, ../scss/modules/_index.scss */
+/* line 258, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section .card-task .operation-card-task .user .icon-user {
   background-color: #2980b9;
   color: white;
@@ -8307,21 +8452,21 @@ body .task-page .columns-section .keeper .column-task .task-card-section .card-t
   position: relative;
   float: left;
 }
-/* line 165, ../scss/modules/_index.scss */
+/* line 267, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section .card-task .operation-card-task .user .icon-user::before {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 176, ../scss/modules/_index.scss */
+/* line 278, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .split-date {
   border-top: 1px solid rgba(189, 195, 199, 0.5);
   display: block;
   position: relative;
   margin: 1.2em 0em;
 }
-/* line 181, ../scss/modules/_index.scss */
+/* line 283, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .split-date::before {
   position: absolute;
   left: 50%;
@@ -8331,95 +8476,64 @@ body .task-page .columns-section .keeper .column-task .split-date::before {
   padding: 0.5em 1em;
   font-size: 0.8em;
   border-radius: 2em;
+  color: rgba(0, 0, 0, 0.5);
 }
-/* line 198, ../scss/modules/_index.scss */
-body .task-page .columns-section .keeper .column-task .january::before {
-  content: 'january';
+/* line 301, ../scss/modules/_index.scss */
+body .task-page .columns-section .keeper .column-task .first-week::before {
+  content: 'first-week';
 }
-/* line 203, ../scss/modules/_index.scss */
-body .task-page .columns-section .keeper .column-task .february::before {
-  content: 'february';
+/* line 306, ../scss/modules/_index.scss */
+body .task-page .columns-section .keeper .column-task .second-week::before {
+  content: 'second-week';
 }
-/* line 208, ../scss/modules/_index.scss */
-body .task-page .columns-section .keeper .column-task .march::before {
-  content: 'march';
+/* line 311, ../scss/modules/_index.scss */
+body .task-page .columns-section .keeper .column-task .third-week::before {
+  content: 'third-week';
 }
-/* line 213, ../scss/modules/_index.scss */
-body .task-page .columns-section .keeper .column-task .april::before {
-  content: 'april';
+/* line 316, ../scss/modules/_index.scss */
+body .task-page .columns-section .keeper .column-task .forth-week::before {
+  content: 'forth-week';
 }
-/* line 218, ../scss/modules/_index.scss */
-body .task-page .columns-section .keeper .column-task .may::before {
-  content: 'may';
-}
-/* line 223, ../scss/modules/_index.scss */
-body .task-page .columns-section .keeper .column-task .june::before {
-  content: 'june';
-}
-/* line 228, ../scss/modules/_index.scss */
-body .task-page .columns-section .keeper .column-task .july::before {
-  content: 'july';
-}
-/* line 233, ../scss/modules/_index.scss */
-body .task-page .columns-section .keeper .column-task .august::before {
-  content: 'august';
-}
-/* line 238, ../scss/modules/_index.scss */
-body .task-page .columns-section .keeper .column-task .september::before {
-  content: 'september';
-}
-/* line 243, ../scss/modules/_index.scss */
-body .task-page .columns-section .keeper .column-task .october::before {
-  content: 'october';
-}
-/* line 248, ../scss/modules/_index.scss */
-body .task-page .columns-section .keeper .column-task .november::before {
-  content: 'november';
-}
-/* line 253, ../scss/modules/_index.scss */
-body .task-page .columns-section .keeper .column-task .december::before {
-  content: 'december';
-}
-/* line 263, ../scss/modules/_index.scss */
+/* line 326, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .sunday::before {
   content: 'sunday';
 }
-/* line 268, ../scss/modules/_index.scss */
+/* line 331, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .monday::before {
   content: 'monday';
 }
-/* line 273, ../scss/modules/_index.scss */
+/* line 336, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .tuesday::before {
   content: 'tuesday';
 }
-/* line 278, ../scss/modules/_index.scss */
+/* line 341, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .wednesday::before {
   content: 'wednesday';
 }
-/* line 283, ../scss/modules/_index.scss */
+/* line 346, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .thursday::before {
   content: 'thursday';
 }
-/* line 288, ../scss/modules/_index.scss */
+/* line 351, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .friday::before {
   content: 'friday';
 }
-/* line 293, ../scss/modules/_index.scss */
+/* line 356, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .saturday::before {
   content: 'saturday';
 }
-/* line 297, ../scss/modules/_index.scss */
+/* line 361, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column {
   width: 100%;
-  height: 7%;
+  height: 3.5em;
   border: 1px solid rgba(189, 195, 199, 0.5);
   border-top: none;
   padding: 0.7em;
 }
-/* line 303, ../scss/modules/_index.scss */
+/* line 367, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card {
   width: 7em;
-  height: 2.2em;
+  height: 2em;
   border-radius: 0.2em;
   font-size: 1em;
   cursor: pointer;
@@ -8427,29 +8541,29 @@ body .task-page .columns-section .keeper .column-task .footer-column .add-card {
   color: white;
   transition: all 0.3s;
 }
-/* line 313, ../scss/modules/_index.scss */
+/* line 377, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card-day {
   background-image: linear-gradient(64deg, #99d0fb, #4c8ac7);
 }
-/* line 315, ../scss/modules/_index.scss */
+/* line 379, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card-day:hover {
   background-image: linear-gradient(64deg, #46aaf7, #2678c9);
   box-shadow: 0em 0.2em 1em #99d0fb;
 }
-/* line 320, ../scss/modules/_index.scss */
+/* line 384, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card-week {
   background-image: linear-gradient(64deg, #f599fb, #9e0aac);
 }
-/* line 322, ../scss/modules/_index.scss */
+/* line 386, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card-week:hover {
   background-image: linear-gradient(64deg, #f064fa, #64016d);
   box-shadow: 0em 0.2em 1em #f064fa;
 }
-/* line 327, ../scss/modules/_index.scss */
+/* line 391, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card-month {
   background-image: linear-gradient(64deg, #999ffb, #0a0a9f);
 }
-/* line 329, ../scss/modules/_index.scss */
+/* line 393, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card-month:hover {
   background-image: linear-gradient(64deg, #5e68f7, #040466);
   box-shadow: 0em 0.2em 1em #5e68f7;

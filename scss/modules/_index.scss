@@ -5,15 +5,30 @@
 }
 .w-100{
     width: 100% !important;
+    @include tablet{
+        width: 80% !important;
+    }
+    @include mobile{
+        width: 100% !important;
+    }
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
     font-family : 'Poppins';
     .task-page{
-        padding     : 1em;
         height      : 100vh;
         .user-date{
-            height  : 10%;
-            // border  : 1px solid green;
+            height          : 10%;
+            padding         : 1em;
+            background-color: $WHITE;
+            position        : sticky;
+            z-index         : 100;
+            @include tablet{
+                height      : 4.5em;
+                position    : fixed;
+            }
             .user{
                 float           : left;
                 height          : 2.5em;
@@ -21,6 +36,22 @@ body{
                 border-radius   : 2em;
                 background-color: $CLOUDS;
                 overflow        : hidden;
+                cursor          : pointer;
+                @include mobile{
+                    padding-right   : 0em;
+                    .name-user{
+                        display     : none;
+                    }
+                }
+                &:hover{
+                    box-shadow  : 0em 0.2em 1em $SILVER;
+                    .icon-user{
+                        font-size   : 1.4em;
+                    }
+                    .name-user{
+                        font-size   : 1.1em;
+                    }
+                }
                 .icon-user{
                     background-color    : $BELIZE_HOLE;
                     color               : $WHITE;
@@ -30,6 +61,7 @@ body{
                     font-size           : 1.3em;
                     position            : relative;
                     float               : left;
+                    transition          : all 0.3s;
                     &::before{
                         position    : absolute;
                         top         : 50%;  
@@ -42,6 +74,7 @@ body{
                     line-height : 2.5;
                     padding-left: 0.4em;
                     float       : left;
+                    transition  : all 0.3s;
                 }
             }//user
             .date{
@@ -54,20 +87,89 @@ body{
                 color           : $WHITE;
                 text-align      : center;
                 letter-spacing  : 0.1em;
+                transition      : all 0.3s;
+                cursor          : pointer;
+                &:hover{
+                    font-size   : 1.1em;
+                    box-shadow  : 0em 0.2em 1em $SILVER;
+                }
             }//date
         }//user-date
+        .shortcut{
+            display     : none;
+            text-align  : center;
+            @include tablet{
+                display         : block;
+                height          : 5.5em;
+                width           : 100%;
+                clear           : both;
+                box-shadow      : 0em 0.7em 1em rgba($color: $SILVER, $alpha: 0.5);
+                position        : fixed;
+                top             : 4.5em;
+                background-color: $WHITE;
+                padding         : 0.4em 0em;
+                z-index         : 100;
+                .link-shortcut{border-radius: 0.2em 0.2em 0.2em 0.2em;
+                    height          : 100%;
+                    width           : 4em;
+                    display         : inline-block;
+                    background-color: #A687FC;
+                    color           : $WHITE;
+                    text-decoration : none;
+                    padding-top     : 2em;
+                    font-size       : 1em;
+                    font-weight     : 600;
+                    margin-right    : 0.5em;
+                    border-radius   : 0.2em 0.2em 0.2em 0.2em;
+                    transition      : all 0.3s;
+                    &:hover{
+                        border-radius   : 0.6em;
+                        box-shadow      : 0.2em 0em 0.7em #A687FC;
+                    }
+                    &:focus{
+                        background-color    : $WHITE;
+                        color               : #A687FC;
+                        box-shadow          : 0em 0em 0.7em #A687FC;
+                        border-radius       : 0.3em 0.3em 0em 0.3em;
+                    }
+                }//link-shortcut
+            }//--tablet--shortcut
+        }//shortcut
+
         .columns-section{
             overflow    : hidden;
             height      : 90%;
-            // border      : 1px solid red;
+            padding     : 1em;
+            @include tablet{
+                overflow: inherit;
+                height  : 80%;
+                position: absolute;
+                top     : 11em;
+            }
             .keeper{
                 height  : 100%;
+                @include tablet{
+                    height: auto;
+                    margin-bottom: 2em;
+                }
                 .column-task{
                     height  : 100%;
                     width   : 98%;
                     float   : left;
+                    @include tablet{
+                        width: 80%;
+                        margin-left: auto;
+                        float: none;
+                    }
+                    @include mobile{
+                        width: 100%;
+                    }
                     &:last-child{
                         margin-right    : 0em;
+                        @include tablet{
+                            margin-right    : auto;
+                            margin-bottom   : 1em;
+                        }
                     }
                     .header-column-day{
                         height          : 3em;
@@ -187,6 +289,7 @@ body{
                             padding         : 0.5em 1em;
                             font-size       : 0.8em;
                             border-radius   : 2em;
+                            color           : rgba($color: $BLACK, $alpha: 0.5);
                         }
                     }//split-date
 /*========================================================================================
@@ -194,64 +297,24 @@ body{
 *******     
 ***         
 */
-                    .january{
+                    .first-week{
                         &::before{
-                            content: 'january';
+                            content: 'first-week';
                         }
                     }
-                    .february{
+                    .second-week{
                         &::before{
-                            content: 'february';
+                            content: 'second-week';
                         }
                     }
-                    .march{
+                    .third-week{
                         &::before{
-                            content: 'march';
+                            content: 'third-week';
                         }
                     }
-                    .april{
+                    .forth-week{
                         &::before{
-                            content: 'april';
-                        }
-                    }
-                    .may{
-                        &::before{
-                            content: 'may';
-                        }
-                    }
-                    .june{
-                        &::before{
-                            content: 'june';
-                        }
-                    }
-                    .july{
-                        &::before{
-                            content: 'july';
-                        }
-                    }
-                    .august{
-                        &::before{
-                            content: 'august';
-                        }
-                    }
-                    .september{
-                        &::before{
-                            content: 'september';
-                        }
-                    }
-                    .october{
-                        &::before{
-                            content: 'october';
-                        }
-                    }
-                    .november{
-                        &::before{
-                            content: 'november';
-                        }
-                    }
-                    .december{
-                        &::before{
-                            content: 'december';
+                            content: 'forth-week';
                         }
                     }
 /*========================================================================================
@@ -294,15 +357,16 @@ body{
                             content: 'saturday';
                         }
                     }
+
                     .footer-column{
                         width       : 100%;
-                        height      : 7%;
+                        height      : 3.5em;
                         border      : 1px solid rgba($color: $SILVER, $alpha: 0.5);
                         border-top  : none;
                         padding     : 0.7em;
                         .add-card{
                             width           : 7em;
-                            height          : 2.2em;
+                            height          : 2em;
                             border-radius   : 0.2em;
                             font-size       : 1em;
                             cursor          : pointer;
