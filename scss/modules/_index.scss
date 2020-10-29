@@ -375,6 +375,7 @@ body{
                             border          : none;
                             color           : $WHITE;
                             transition      : all 0.3s;
+                            &:focus{outline: none;}
                         }//add-card
                         .add-card-day{
                             background-image    : linear-gradient(64deg ,#99d0fb,#4c8ac7);
@@ -402,4 +403,88 @@ body{
             }//keeper
         }//columns-section
     }//task-page
+    .popup{
+        position        : fixed;
+        top             : 0em;
+        left            : 0em;
+        z-index         : 1000;
+        width           : 100%;
+        height          : 100%;
+        overflow        : auto;
+        display         : none;
+        place-items     : center;
+        background-color: rgba($color: #5e5ef4, $alpha: 0.7);
+        .create-task{
+            width   : 25em;
+            display : none;
+            color   : $WHITE;
+            h1{
+                text-align      : center;
+                line-height     : 2;
+                margin-bottom   : 1.5em;
+                font-size       : 2em;
+            }
+            span{
+                font-size       : 1.1em;
+            }
+            input{
+                width           : 100%;
+                padding         : 0.5em;
+                font-size       : 1.3em;
+                border-radius   : 0.3em;
+                border          : none;
+                margin          : 0.5em 0em 1.5em;
+            }
+            textarea{
+                width           : 100%;
+                margin          : 0.5em 0em 1.5em;
+                resize          : none;
+                border          : none;
+                border-radius   : 0.3em;
+            }
+            button{
+                width               : 100%;
+                padding             : 0.5em;
+                font-size           : 1.2em;
+                border              : none;
+                background-image    : linear-gradient(64deg ,#f064fa,#64016d);
+                color               : $WHITE;
+                cursor              : pointer;
+                border-radius       : 0.3em;
+                transition          : all 0.4s;
+                &:hover{
+                    box-shadow          : 0em 0.2em 1em #f064fa;
+                    transform           : scale(1.02);
+                }
+                &:focus{outline: none;}
+            }
+        }//create-task
+        .successful-answer-create-task{
+            display: block;
+            width: 25em;
+            text-align: center;
+            h2{
+                line-height     : 2;
+                font-size       : 1.5em;
+                color           : $WHITE;
+                margin-bottom   : 1em;
+            }
+            button{
+                width               : 100%;
+                padding             : 0.5em;
+                font-size           : 1.2em;
+                border              : none;
+                background-image    : linear-gradient(64deg ,#37e654,#046604);
+                color               : $WHITE;
+                cursor              : pointer;
+                border-radius       : 0.3em;
+                transition          : all 0.4s;
+                &:hover{
+                    box-shadow          : 0em 0.2em 1em #139b1e;
+                    transform           : scale(1.02);
+                }
+                &:focus{outline: none;}
+            }
+        }
+    }//popup
 }//body

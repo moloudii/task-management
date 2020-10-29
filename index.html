@@ -32,7 +32,7 @@
                     <div class="header-column-day" id="header-column-day">
                         <h3>Day</h3>
                     </div>
-                    <div class="task-card-section" id="divDay" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
+                    <div class="task-card-section" id="Day" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
                         <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="day-1">
                             <div class="text-card-task">
                                 <h4 class="title-task">Name Task</h4>
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                     <div class="footer-column">
-                        <input type="submit" class="add-card add-card-day">
+                        <input type="submit" class="add-card add-card-day" onclick="showPopup(name)" name="Day" value="Add Task">
                     </div>
                 </div>
             </div>
@@ -129,7 +129,7 @@
                     <div class="header-column-week" id="header-column-week">
                         <h3>Week</h3>
                     </div>
-                    <div class="task-card-section" id="divWeek" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
+                    <div class="task-card-section" id="Week" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
                         <span class="split-date sunday"></span>
                         <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="week-1">
                             <div class="text-card-task">
@@ -154,7 +154,7 @@
                         </div>
                     </div>
                     <div class="footer-column">
-                        <input type="submit" class="add-card add-card-week">
+                        <input type="submit" class="add-card add-card-week" onclick="showPopup(name)" name="Week" value="Add Task">
                     </div>
                 </div>
             </div>
@@ -164,7 +164,7 @@
                     <div class="header-column-month" id="header-column-month">
                         <h3>Month</h3>
                     </div>
-                    <div class="task-card-section" id="divMonth" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
+                    <div class="task-card-section" id="Month" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
                         <span class="split-date second-week"></span>
                         <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="month-1">
                             <div class="text-card-task">
@@ -212,15 +212,30 @@
                         </div>
                     </div>
                     <div class="footer-column">
-                        <input type="submit" class="add-card add-card-month">
+                        <input type="submit" class="add-card add-card-month" onclick="showPopup(name)" name="Month" value="Add Task">
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
+    <div class="popup" id="popup">
+        <div class="create-task">
+            <h1 id="title-popup"></h1>
+            <span>Name task :</span>
+            <input type="text" id="name-task">
+            <span>Description :</span>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button>Add Task</button>
+        </div>
+        <div class="successful-answer-create-task">
+            <h2>task was created successfully</h2>
+            <button onclick="closePopup()">finish</button>
+        </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    
 </body>
 
 </html>
