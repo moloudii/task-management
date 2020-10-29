@@ -69,6 +69,8 @@ function dropCardTask(ev) {
 let popup = document.getElementById('popup');
 let addTaskButton = document.getElementById('add-task-day');
 let titlePopup = document.getElementById('title-popup');
+const createTask = document.getElementById('create-task');
+const unsuccessful = document.getElementById('unsuccessful');
 
 function showPopup(nameTask) {
     popup.style.display = "grid";
@@ -86,10 +88,14 @@ function closePopup(){
 
 window.addEventListener("click", function (event) {
     if (event.target == popup) {
-        // popup.style.display = "none";
         closePopup();
     }
 });
+
+function retryCreateTask(){
+    unsuccessful.style.display = "none";
+    createTask.style.display = "block";
+}
 
 // --------------------------------------------------------
 //    End Corresponding to the pop-up window

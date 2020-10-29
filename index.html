@@ -220,7 +220,7 @@
         </div>
     </div>
     <div class="popup" id="popup">
-        <div class="create-task">
+        <div class="create-task" id="create-task">
             <h1 id="title-popup"></h1>
             <span>Name task :</span>
             <input type="text" id="name-task">
@@ -228,9 +228,15 @@
             <textarea name="" id="" cols="30" rows="10"></textarea>
             <button>Add Task</button>
         </div>
+
         <div class="successful-answer-create-task">
             <h2>task was created successfully</h2>
             <button onclick="closePopup()">finish</button>
+        </div>
+
+        <div class="unsuccessful-answer-create-task" id="unsuccessful">
+            <h2><span class="fa fa-exclamation-triangle"></span> task created</h2>
+            <button onclick="retryCreateTask()">Retry</button>
         </div>
     </div>
     <script src="js/jquery.min.js"></script>
