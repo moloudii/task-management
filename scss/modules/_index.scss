@@ -1,11 +1,522 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin      : 0;
+    padding     : 0em;
+    box-sizing  : border-box;
 }
-body{
-    background-color: red;
-    @include mini_laptop{
-        background-color: orange;
+.w-100{
+    width: 100% !important;
+    @include tablet{
+        width: 80% !important;
+    }
+    @include mobile{
+        width: 100% !important;
     }
 }
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family : 'Poppins';
+    .task-page{
+        height      : 100vh;
+        .user-date{
+            height          : 10%;
+            padding         : 1em;
+            background-color: $WHITE;
+            position        : sticky;
+            z-index         : 100;
+            @include tablet{
+                height      : 4.5em;
+                position    : fixed;
+            }
+            .user{
+                float           : left;
+                height          : 2.5em;
+                padding-right   : 1em ; 
+                border-radius   : 2em;
+                background-color: $CLOUDS;
+                overflow        : hidden;
+                cursor          : pointer;
+                @include mobile{
+                    padding-right   : 0em;
+                    .name-user{
+                        display     : none;
+                    }
+                }
+                &:hover{
+                    box-shadow  : 0em 0.2em 1em $SILVER;
+                    .icon-user{
+                        font-size   : 1.4em;
+                    }
+                    .name-user{
+                        font-size   : 1.1em;
+                    }
+                }
+                .icon-user{
+                    background-color    : $BELIZE_HOLE;
+                    color               : $WHITE;
+                    height              : 100%;
+                    width               : 2em;
+                    border-radius       : 2em;
+                    font-size           : 1.3em;
+                    position            : relative;
+                    float               : left;
+                    transition          : all 0.3s;
+                    &::before{
+                        position    : absolute;
+                        top         : 50%;  
+                        left        : 50%;
+                        transform   : translate(-50%, -50%);   
+                    }
+                }
+                .name-user{
+                    font-size   : 1em;
+                    line-height : 2.5;
+                    padding-left: 0.4em;
+                    float       : left;
+                    transition  : all 0.3s;
+                }
+            }//user
+            .date{
+                float           : right;
+                height          : 2.5em;
+                padding         : 0em 1.5em;
+                border-radius   : 2em;
+                background-color: $PETER_RIVER;
+                line-height     : 2.5;
+                color           : $WHITE;
+                text-align      : center;
+                letter-spacing  : 0.1em;
+                transition      : all 0.3s;
+                cursor          : pointer;
+                &:hover{
+                    font-size   : 1.1em;
+                    box-shadow  : 0em 0.2em 1em $SILVER;
+                }
+            }//date
+        }//user-date
+        .shortcut{
+            display     : none;
+            text-align  : center;
+            @include tablet{
+                display         : block;
+                height          : 5.5em;
+                width           : 100%;
+                clear           : both;
+                box-shadow      : 0em 0.7em 1em rgba($color: $SILVER, $alpha: 0.5);
+                position        : fixed;
+                top             : 4.5em;
+                background-color: $WHITE;
+                padding         : 0.4em 0em;
+                z-index         : 100;
+                .link-shortcut{border-radius: 0.2em 0.2em 0.2em 0.2em;
+                    height          : 100%;
+                    width           : 4em;
+                    display         : inline-block;
+                    background-color: #A687FC;
+                    color           : $WHITE;
+                    text-decoration : none;
+                    padding-top     : 2em;
+                    font-size       : 1em;
+                    font-weight     : 600;
+                    margin-right    : 0.5em;
+                    border-radius   : 0.2em 0.2em 0.2em 0.2em;
+                    transition      : all 0.3s;
+                    &:hover{
+                        border-radius   : 0.6em;
+                        box-shadow      : 0.2em 0em 0.7em #A687FC;
+                    }
+                    &:focus{
+                        background-color    : $WHITE;
+                        color               : #A687FC;
+                        box-shadow          : 0em 0em 0.7em #A687FC;
+                        border-radius       : 0.3em 0.3em 0em 0.3em;
+                    }
+                }//link-shortcut
+            }//--tablet--shortcut
+        }//shortcut
+
+        .columns-section{
+            overflow    : hidden;
+            height      : 90%;
+            padding     : 1em;
+            @include tablet{
+                overflow: scroll;
+                height  : 80%;
+                position: absolute;
+                top     : 10em;
+            }
+            .keeper{
+                height  : 100%;
+                @include tablet{
+                    height: auto;
+                    margin-bottom: 2em;
+                }
+                &:last-child{
+                    margin-bottom   : 0em;
+                }
+                .column-task{
+                    height  : 100%;
+                    width   : 98%;
+                    float   : left;
+                    @include tablet{
+                        width: 80%;
+                        margin-left: auto;
+                        float: none;
+                    }
+                    @include mobile{
+                        width: 100%;
+                    }
+                    &:last-child{
+                        margin-right    : 0em;
+                        @include tablet{
+                            margin-right    : auto;
+                        }
+                    }
+                    .header-column-day{
+                        height          : 3em;
+                        background-image: linear-gradient(64deg ,#99d0fb,#4c8ac7);
+                        border-radius   : 0.5em 0.5em 0em 0em;
+                        padding         : 1em;
+                        h3{
+                            font-size   : 1.3em;  
+                            font-weight : 600;
+                            color       : $WHITE;
+                        }
+                    }//header-column-day
+                    .header-column-week{
+                        height          : 3em;
+                        background-image: linear-gradient(64deg ,#f599fb,#9e0aac);
+                        border-radius   : 0.5em 0.5em 0em 0em;
+                        padding         : 1em;
+                        h3{
+                            font-size   : 1.3em;  
+                            font-weight : 600;
+                            color       : $WHITE;
+                        }
+                    }//header-column-week
+                    .header-column-month{
+                        height          : 3em;
+                        background-image: linear-gradient(64deg ,#999ffb,#0a0a9f);
+                        border-radius   : 0.5em 0.5em 0em 0em;
+                        padding         : 1em;
+                        h3{
+                            font-size   : 1.3em;  
+                            font-weight : 600;
+                            color       : $WHITE;
+                        }
+                    }//header-column-month
+                    .task-card-section{
+                        height      : 87%;
+                        overflow-y  : scroll;
+                        border      : 1px solid rgba($color: $SILVER, $alpha: 0.5);
+                        .card-task{
+                            // width: 100%;
+                            border          : 1px solid rgba($color: $CLOUDS, $alpha: 0.5);
+                            border-radius   : 0.3em;
+                            background-color: $WHITE;
+                            box-shadow      : 0em 0.2em 1em $SILVER;
+                            margin          : 0.7em;
+                            cursor          : pointer;
+                            .text-card-task{
+                                // min-height  : 8em;
+                                padding     : 0.5em 1em;
+                                .title-task{
+                                    font-weight : 600;
+                                    line-height : 2;
+                                    display     : block;
+                                }
+                                .description-task{
+                                    font-size   : 0.9em;
+                                    color       : $ASBESTOS;
+                                    line-height : 1.7;
+                                    margin-top  : 0.5em;
+                                }
+                            }//text-card-task
+                            .operation-card-task{
+                                width       : 100%;
+                                border-top  : 1px solid rgba($color: $SILVER, $alpha: 0.5);
+                                margin      : 0;
+                                padding     : 0.5em 1em;
+                                overflow    : hidden;
+                                .start{
+                                    height      : 100%;
+                                    width       : 5em;
+                                    line-height : 1.5;
+                                    font-size   : 1.1em;
+                                    float       : left;
+                                    margin-top  : 0.2em;
+                                }
+                                .start-time{
+                                    line-height : 1.5;
+                                    font-size   : 1.1em;
+                                    display     : inline-block;
+                                    margin-top  : 0.2em;
+                                }
+                                .user{
+                                    float           : right;
+                                    height          : 2em;
+                                    overflow        : hidden;
+                                    .icon-user{
+                                        background-color    : $BELIZE_HOLE;
+                                        color               : $WHITE;
+                                        height              : 100%;
+                                        width               : 1.8em;
+                                        border-radius       : 2em;
+                                        font-size           : 1.1em;
+                                        position            : relative;
+                                        float               : left;
+                                        &::before{
+                                            position    : absolute;
+                                            top         : 50%;  
+                                            left        : 50%;
+                                            transform   : translate(-50%, -50%);   
+                                        }
+                                    }//icon-user
+                                }//user
+                            }//operation-card-task
+                        }//card-task
+                    }//task-card-section
+                    .split-date{
+                        border-top  : 1px solid rgba($color: $SILVER, $alpha: 0.5);
+                        display     : block;
+                        position    : relative;
+                        margin      : 1.2em 0em;
+                        &::before{
+                            position        : absolute;
+                            left            : 50%;
+                            top             : 50%;
+                            transform       : translate(-50%, -50%);   
+                            background-color:  $CLOUDS;
+                            padding         : 0.5em 1em;
+                            font-size       : 0.8em;
+                            border-radius   : 2em;
+                            color           : rgba($color: $BLACK, $alpha: 0.5);
+                        }
+                    }//split-date
+/*========================================================================================
+*********   CLASS FOR MONTH {SPLIT MONTH}
+*******     
+***         
+*/
+                    .first-week{
+                        &::before{
+                            content: 'first-week';
+                        }
+                    }
+                    .second-week{
+                        &::before{
+                            content: 'second-week';
+                        }
+                    }
+                    .third-week{
+                        &::before{
+                            content: 'third-week';
+                        }
+                    }
+                    .forth-week{
+                        &::before{
+                            content: 'forth-week';
+                        }
+                    }
+/*========================================================================================
+*********   CLASS FOR DAY {SPLIT DAY}
+*******     
+***         
+*/
+                    .sunday{
+                        &::before{
+                            content: 'sunday';
+                        }
+                    }
+                    .monday{
+                        &::before{
+                            content: 'monday';
+                        }
+                    }
+                    .tuesday{
+                        &::before{
+                            content: 'tuesday';
+                        }
+                    }
+                    .wednesday{
+                        &::before{
+                            content: 'wednesday';
+                        }
+                    }
+                    .thursday{
+                        &::before{
+                            content: 'thursday';
+                        }
+                    }
+                    .friday{
+                        &::before{
+                            content: 'friday';
+                        }
+                    }
+                    .saturday{
+                        &::before{
+                            content: 'saturday';
+                        }
+                    }
+
+                    .footer-column{
+                        width       : 100%;
+                        height      : 3.5em;
+                        border      : 1px solid rgba($color: $SILVER, $alpha: 0.5);
+                        border-top  : none;
+                        padding     : 0.7em;
+                        .add-card{
+                            width           : 7em;
+                            height          : 2em;
+                            border-radius   : 0.2em;
+                            font-size       : 1em;
+                            cursor          : pointer;
+                            border          : none;
+                            color           : $WHITE;
+                            transition      : all 0.3s;
+                            &:focus{outline: none;}
+                        }//add-card
+                        .add-card-day{
+                            background-image    : linear-gradient(64deg ,#99d0fb,#4c8ac7);
+                            &:hover{
+                                background-image    : linear-gradient(64deg ,#46aaf7,#2678c9);
+                                box-shadow          : 0em 0.2em 1em #99d0fb;
+                            }
+                        }//add-card-day
+                        .add-card-week{
+                            background-image    : linear-gradient(64deg ,#f599fb,#9e0aac);
+                            &:hover{
+                                background-image    : linear-gradient(64deg ,#f064fa,#64016d);
+                                box-shadow          : 0em 0.2em 1em #f064fa;
+                            }
+                        }//add-card-week
+                        .add-card-month{
+                            background-image    : linear-gradient(64deg ,#999ffb,#0a0a9f);
+                            &:hover{
+                                background-image    : linear-gradient(64deg ,#5e68f7,#040466);
+                                box-shadow          : 0em 0.2em 1em #5e68f7;
+                            }
+                        }//add-card-month
+                    }//footer-column
+                }//column-task
+            }//keeper
+        }//columns-section
+    }//task-page
+    .popup{
+        position        : fixed;
+        top             : 0em;
+        left            : 0em;
+        z-index         : 1000;
+        width           : 100%;
+        height          : 100%;
+        overflow        : auto;
+        display         : none;
+        place-items     : center;
+        background-color: rgba($color: #5e5ef4, $alpha: 0.7);
+        @include mobile{
+            background-color: rgba($color: #5e5ef4, $alpha: 0.9);
+        }
+        .create-task{
+            width   : 25em;
+            color   : $WHITE;
+            @include mini_mobile{
+                width: 85%;
+                h1{
+                    font-size: 1.5em !important;
+                }
+                span{
+                    font-size: 1em !important;
+                }
+                input , textarea{
+                    font-size: 1em !important;
+                }
+            }
+            h1{
+                text-align      : center;
+                line-height     : 2;
+                margin-bottom   : 1.5em;
+                font-size       : 2em;
+            }
+            span{
+                font-size       : 1.1em;
+            }
+            input{
+                width           : 100%;
+                padding         : 0.5em;
+                font-size       : 1.3em;
+                border-radius   : 0.3em;
+                border          : none;
+                margin          : 0.5em 0em 1.5em;
+            }
+            textarea{
+                width           : 100%;
+                margin          : 0.5em 0em 1.5em;
+                resize          : none;
+                border          : none;
+                border-radius   : 0.3em;
+            }
+            button , input[type="submit"]{
+                width               : 100%;
+                padding             : 0.5em;
+                font-size           : 1.2em;
+                border              : none;
+                background-image    : linear-gradient(64deg ,#f064fa,#64016d);
+                color               : $WHITE;
+                cursor              : pointer;
+                border-radius       : 0.3em;
+                transition          : all 0.4s;
+                &:hover{
+                    box-shadow          : 0em 0.2em 1em #f064fa;
+                    transform           : scale(1.02);
+                }
+                &:focus{outline: none;}
+            }
+        }//create-task
+        .answer-create-task{
+            width       : 25em;
+            display     : none;
+            text-align  : center;
+            h2{
+                line-height     : 2;
+                font-size       : 1.5em;
+                color           : $WHITE;
+                margin-bottom   : 1em;
+            }
+            button{
+                width               : 100%;
+                padding             : 0.5em;
+                font-size           : 1.2em;
+                border              : none;
+                color               : $WHITE;
+                cursor              : pointer;
+                border-radius       : 0.3em;
+                transition          : all 0.4s;
+                &:focus{outline: none;}
+            }
+        }//answer-create-task
+        .successful-answer-create-task{
+            @extend .answer-create-task;
+            button{
+                background-image    : linear-gradient(64deg ,#37e654,#046604);
+                &:hover{
+                    box-shadow          : 0em 0.2em 1em #139b1e;
+                    transform           : scale(1.02);
+                }
+            }
+        }//successful-answer-create-task
+        .unsuccessful-answer-create-task{
+            h2{
+                color: #9b1313;
+            }
+            @extend .answer-create-task;
+            button{
+                background-image    : linear-gradient(64deg ,#e63737,#660404);
+                &:hover{
+                    box-shadow          : 0em 0.2em 1em #9b1313;
+                    transform           : scale(1.02);
+                }
+            }
+        }//unsuccessful-answer-create-task
+    }//popup
+}//body

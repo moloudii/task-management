@@ -1,16 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    
-    <div class="row">
-        <h1 class="col-xl-12">1</h1>
+
+    <div class="task-page row">
+        <div class="user-date col-xl-12 col-lg-12 col-sm-12">
+            <div class="user">
+                <i class="fa fa-user icon-user"></i>
+                <span class="name-user">mohammad moloudi</span>
+            </div>
+            <div class="date">10/25/2001</div>
+        </div>
+
+        <div class="shortcut">
+            <a href="#header-column-day" class="link-shortcut">Day</a>
+            <a href="#header-column-week" class="link-shortcut">Week</a>
+            <a href="#header-column-month" class="link-shortcut">Month</a>
+        </div>
+
+        <div class=" columns-section row">
+            <div class="col-xl-4 col-lg-4 col-md-12 keeper">
+                <div class="column-task">
+                    <div class="header-column-day" id="header-column-day">
+                        <h3>Day</h3>
+                    </div>
+                    <div class="task-card-section" id="Day" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="day-1">
+                            <div class="text-card-task">
+                                <h4 class="title-task">Name Task</h4>
+                                <p class="description-task">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Minima .
+                                </p>
+                            </div>
+                            <div class="operation-card-task">
+                                <div class="start">
+                                    <i class="fa fa-play"></i>
+                                    <span>start</span>
+                                </div>
+                                <div class="start-time">
+                                    <span>10:25 AM</span>
+                                </div>
+                                <div class="user">
+                                    <i class="fa fa-user icon-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="day-2">
+                            <div class="text-card-task">
+                                <h4 class="title-task">Name Task</h4>
+                                <p class="description-task">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Minima .
+                                </p>
+                            </div>
+                            <div class="operation-card-task">
+                                <div class="start">
+                                    <i class="fa fa-play"></i>
+                                    <span>start</span>
+                                </div>
+                                <div class="start-time">
+                                    <span>10:25 AM</span>
+                                </div>
+                                <div class="user">
+                                    <i class="fa fa-user icon-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="day-3">
+                            <div class="text-card-task">
+                                <h4 class="title-task">Name Task</h4>
+                                <p class="description-task">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Minima .
+                                </p>
+                            </div>
+                            <div class="operation-card-task">
+                                <div class="start">
+                                    <i class="fa fa-play"></i>
+                                    <span>start</span>
+                                </div>
+                                <div class="start-time">
+                                    <span>10:25 AM</span>
+                                </div>
+                                <div class="user">
+                                    <i class="fa fa-user icon-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="day-4">
+                            <div class="text-card-task">
+                                <h4 class="title-task">Name Task</h4>
+                                <p class="description-task">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Minima .
+                                </p>
+                            </div>
+                            <div class="operation-card-task">
+                                <div class="start">
+                                    <i class="fa fa-play"></i>
+                                    <span>start</span>
+                                </div>
+                                <div class="start-time">
+                                    <span>10:25 AM</span>
+                                </div>
+                                <div class="user">
+                                    <i class="fa fa-user icon-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <input type="submit" class="add-card add-card-day" onclick="showPopup(name)" name="Day" value="Add Task">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-12 keeper">
+                <div class="column-task">
+                    <div class="header-column-week" id="header-column-week">
+                        <h3>Week</h3>
+                    </div>
+                    <div class="task-card-section" id="Week" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
+                        <span class="split-date sunday"></span>
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="week-1">
+                            <div class="text-card-task">
+                                <h4 class="title-task">Name Task</h4>
+                                <p class="description-task">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Minima .
+                                </p>
+                            </div>
+                            <div class="operation-card-task">
+                                <div class="start">
+                                    <i class="fa fa-play"></i>
+                                    <span>start</span>
+                                </div>
+                                <div class="start-time">
+                                    <span>10:25 AM</span>
+                                </div>
+                                <div class="user">
+                                    <i class="fa fa-user icon-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <input type="submit" class="add-card add-card-week" onclick="showPopup(name)" name="Week"
+                            value="Add Task">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-12 keeper ">
+                <div class="column-task w-100">
+                    <div class="header-column-month" id="header-column-month">
+                        <h3>Month</h3>
+                    </div>
+                    <div class="task-card-section" id="Month" ondrop="dropCardTask(event)"
+                        ondragover="allowDrop(event)">
+                        <span class="split-date second-week"></span>
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="month-1">
+                            <div class="text-card-task">
+                                <h4 class="title-task">Name Task</h4>
+                                <p class="description-task">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Minima .
+                                </p>
+                            </div>
+                            <div class="operation-card-task">
+                                <div class="start">
+                                    <i class="fa fa-play"></i>
+                                    <span>start</span>
+                                </div>
+                                <div class="start-time">
+                                    <span>10:25 AM</span>
+                                </div>
+                                <div class="user">
+                                    <i class="fa fa-user icon-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="split-date second-week"></span>
+
+                        <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="month-2">
+                            <div class="text-card-task">
+                                <h4 class="title-task">Name Task</h4>
+                                <p class="description-task">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Minima .
+                                </p>
+                            </div>
+                            <div class="operation-card-task">
+                                <div class="start">
+                                    <i class="fa fa-play"></i>
+                                    <span>start</span>
+                                </div>
+                                <div class="start-time">
+                                    <span>10:25 AM</span>
+                                </div>
+                                <div class="user">
+                                    <i class="fa fa-user icon-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <input type="submit" class="add-card add-card-month" onclick="showPopup(name)" name="Month" value="Add Task">
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+    <div class="popup" id="popup">
+        <div class="create-task" id="create-task">
+            <h1 id="title-popup"></h1>
+            <form action="#" onsubmit="createNewTask()">
+                <span>Name task :</span>
+                <input type="text" id="name-new-task" required>
+                <span>Description :</span>
+                <textarea id="description-new-task" cols="30" rows="10"></textarea>
+                <input type="submit" value="Create Task">
+            </form>
+        </div>
+
+        <div class="successful-answer-create-task" id="successful">
+            <h2>task was created successfully</h2>
+            <button onclick="closePopup()">finish</button>
+        </div>
+
+        <div class="unsuccessful-answer-create-task" id="unsuccessful">
+            <h2><span class="fa fa-exclamation-triangle"></span> task created</h2>
+            <button onclick="retryCreateTask()">Retry</button>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>
