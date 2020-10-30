@@ -154,7 +154,8 @@
                         </div>
                     </div>
                     <div class="footer-column">
-                        <input type="submit" class="add-card add-card-week" onclick="showPopup(name)" name="Week" value="Add Task">
+                        <input type="submit" class="add-card add-card-week" onclick="showPopup(name)" name="Week"
+                            value="Add Task">
                     </div>
                 </div>
             </div>
@@ -164,7 +165,8 @@
                     <div class="header-column-month" id="header-column-month">
                         <h3>Month</h3>
                     </div>
-                    <div class="task-card-section" id="Month" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
+                    <div class="task-card-section" id="Month" ondrop="dropCardTask(event)"
+                        ondragover="allowDrop(event)">
                         <span class="split-date second-week"></span>
                         <div class="card-task" draggable="true" ondragstart="dragCardTask(event)" id="month-1">
                             <div class="text-card-task">
@@ -222,14 +224,16 @@
     <div class="popup" id="popup">
         <div class="create-task" id="create-task">
             <h1 id="title-popup"></h1>
-            <span>Name task :</span>
-            <input type="text" id="name-task">
-            <span>Description :</span>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-            <button>Add Task</button>
+            <form action="#" onsubmit="createNewTask()">
+                <span>Name task :</span>
+                <input type="text" id="name-new-task" required>
+                <span>Description :</span>
+                <textarea id="description-new-task" cols="30" rows="10"></textarea>
+                <input type="submit" value="Create Task">
+            </form>
         </div>
 
-        <div class="successful-answer-create-task">
+        <div class="successful-answer-create-task" id="successful">
             <h2>task was created successfully</h2>
             <button onclick="closePopup()">finish</button>
         </div>
@@ -241,7 +245,7 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    
+
 </body>
 
 </html>

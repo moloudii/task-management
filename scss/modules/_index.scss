@@ -219,7 +219,7 @@ body{
                             margin          : 0.7em;
                             cursor          : pointer;
                             .text-card-task{
-                                min-height  : 8em;
+                                // min-height  : 8em;
                                 padding     : 0.5em 1em;
                                 .title-task{
                                     font-weight : 600;
@@ -414,10 +414,24 @@ body{
         display         : none;
         place-items     : center;
         background-color: rgba($color: #5e5ef4, $alpha: 0.7);
+        @include mobile{
+            background-color: rgba($color: #5e5ef4, $alpha: 0.9);
+        }
         .create-task{
             width   : 25em;
-            display : none;
             color   : $WHITE;
+            @include mini_mobile{
+                width: 85%;
+                h1{
+                    font-size: 1.5em !important;
+                }
+                span{
+                    font-size: 1em !important;
+                }
+                input , textarea{
+                    font-size: 1em !important;
+                }
+            }
             h1{
                 text-align      : center;
                 line-height     : 2;
@@ -442,7 +456,7 @@ body{
                 border          : none;
                 border-radius   : 0.3em;
             }
-            button{
+            button , input[type="submit"]{
                 width               : 100%;
                 padding             : 0.5em;
                 font-size           : 1.2em;
@@ -461,6 +475,7 @@ body{
         }//create-task
         .answer-create-task{
             width       : 25em;
+            display     : none;
             text-align  : center;
             h2{
                 line-height     : 2;
@@ -481,7 +496,6 @@ body{
             }
         }//answer-create-task
         .successful-answer-create-task{
-            display : none;
             @extend .answer-create-task;
             button{
                 background-image    : linear-gradient(64deg ,#37e654,#046604);
@@ -492,7 +506,6 @@ body{
             }
         }//successful-answer-create-task
         .unsuccessful-answer-create-task{
-            display     : block;
             h2{
                 color: #9b1313;
             }

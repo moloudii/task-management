@@ -8403,7 +8403,6 @@ body .task-page .columns-section .keeper .column-task .task-card-section .card-t
 }
 /* line 221, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section .card-task .text-card-task {
-  min-height: 8em;
   padding: 0.5em 1em;
 }
 /* line 224, ../scss/modules/_index.scss */
@@ -8593,24 +8592,47 @@ body .popup {
   place-items: center;
   background-color: rgba(94, 94, 244, 0.7);
 }
-/* line 417, ../scss/modules/_index.scss */
+@media screen and (max-width: 40em) {
+  /* line 406, ../scss/modules/_index.scss */
+  body .popup {
+    background-color: rgba(94, 94, 244, 0.9);
+  }
+}
+/* line 420, ../scss/modules/_index.scss */
 body .popup .create-task {
   width: 25em;
-  display: none;
   color: white;
 }
-/* line 421, ../scss/modules/_index.scss */
+@media screen and (max-width: 25em) {
+  /* line 420, ../scss/modules/_index.scss */
+  body .popup .create-task {
+    width: 85%;
+  }
+  /* line 425, ../scss/modules/_index.scss */
+  body .popup .create-task h1 {
+    font-size: 1.5em !important;
+  }
+  /* line 428, ../scss/modules/_index.scss */
+  body .popup .create-task span {
+    font-size: 1em !important;
+  }
+  /* line 431, ../scss/modules/_index.scss */
+  body .popup .create-task input, body .popup .create-task textarea {
+    font-size: 1em !important;
+  }
+}
+/* line 435, ../scss/modules/_index.scss */
 body .popup .create-task h1 {
   text-align: center;
   line-height: 2;
   margin-bottom: 1.5em;
   font-size: 2em;
 }
-/* line 427, ../scss/modules/_index.scss */
+/* line 441, ../scss/modules/_index.scss */
 body .popup .create-task span {
   font-size: 1.1em;
 }
-/* line 430, ../scss/modules/_index.scss */
+/* line 444, ../scss/modules/_index.scss */
 body .popup .create-task input {
   width: 100%;
   padding: 0.5em;
@@ -8619,7 +8641,7 @@ body .popup .create-task input {
   border: none;
   margin: 0.5em 0em 1.5em;
 }
-/* line 438, ../scss/modules/_index.scss */
+/* line 452, ../scss/modules/_index.scss */
 body .popup .create-task textarea {
   width: 100%;
   margin: 0.5em 0em 1.5em;
@@ -8627,8 +8649,8 @@ body .popup .create-task textarea {
   border: none;
   border-radius: 0.3em;
 }
-/* line 445, ../scss/modules/_index.scss */
-body .popup .create-task button {
+/* line 459, ../scss/modules/_index.scss */
+body .popup .create-task button, body .popup .create-task input[type="submit"] {
   width: 100%;
   padding: 0.5em;
   font-size: 1.2em;
@@ -8639,28 +8661,29 @@ body .popup .create-task button {
   border-radius: 0.3em;
   transition: all 0.4s;
 }
-/* line 455, ../scss/modules/_index.scss */
-body .popup .create-task button:hover {
+/* line 469, ../scss/modules/_index.scss */
+body .popup .create-task button:hover, body .popup .create-task input[type="submit"]:hover {
   box-shadow: 0em 0.2em 1em #f064fa;
   transform: scale(1.02);
 }
-/* line 459, ../scss/modules/_index.scss */
-body .popup .create-task button:focus {
+/* line 473, ../scss/modules/_index.scss */
+body .popup .create-task button:focus, body .popup .create-task input[type="submit"]:focus {
   outline: none;
 }
-/* line 462, ../scss/modules/_index.scss */
+/* line 476, ../scss/modules/_index.scss */
 body .popup .answer-create-task, body .popup .successful-answer-create-task, body .popup .unsuccessful-answer-create-task {
   width: 25em;
+  display: none;
   text-align: center;
 }
-/* line 465, ../scss/modules/_index.scss */
+/* line 480, ../scss/modules/_index.scss */
 body .popup .answer-create-task h2, body .popup .successful-answer-create-task h2, body .popup .unsuccessful-answer-create-task h2 {
   line-height: 2;
   font-size: 1.5em;
   color: white;
   margin-bottom: 1em;
 }
-/* line 471, ../scss/modules/_index.scss */
+/* line 486, ../scss/modules/_index.scss */
 body .popup .answer-create-task button, body .popup .successful-answer-create-task button, body .popup .unsuccessful-answer-create-task button {
   width: 100%;
   padding: 0.5em;
@@ -8671,36 +8694,28 @@ body .popup .answer-create-task button, body .popup .successful-answer-create-ta
   border-radius: 0.3em;
   transition: all 0.4s;
 }
-/* line 480, ../scss/modules/_index.scss */
+/* line 495, ../scss/modules/_index.scss */
 body .popup .answer-create-task button:focus, body .popup .successful-answer-create-task button:focus, body .popup .unsuccessful-answer-create-task button:focus {
   outline: none;
 }
-/* line 483, ../scss/modules/_index.scss */
-body .popup .successful-answer-create-task {
-  display: none;
-}
-/* line 486, ../scss/modules/_index.scss */
+/* line 500, ../scss/modules/_index.scss */
 body .popup .successful-answer-create-task button {
   background-image: linear-gradient(64deg, #37e654, #046604);
 }
-/* line 488, ../scss/modules/_index.scss */
+/* line 502, ../scss/modules/_index.scss */
 body .popup .successful-answer-create-task button:hover {
   box-shadow: 0em 0.2em 1em #139b1e;
   transform: scale(1.02);
 }
-/* line 494, ../scss/modules/_index.scss */
-body .popup .unsuccessful-answer-create-task {
-  display: block;
-}
-/* line 496, ../scss/modules/_index.scss */
+/* line 509, ../scss/modules/_index.scss */
 body .popup .unsuccessful-answer-create-task h2 {
   color: #9b1313;
 }
-/* line 500, ../scss/modules/_index.scss */
+/* line 513, ../scss/modules/_index.scss */
 body .popup .unsuccessful-answer-create-task button {
   background-image: linear-gradient(64deg, #e63737, #660404);
 }
-/* line 502, ../scss/modules/_index.scss */
+/* line 515, ../scss/modules/_index.scss */
 body .popup .unsuccessful-answer-create-task button:hover {
   box-shadow: 0em 0.2em 1em #9b1313;
   transform: scale(1.02);
