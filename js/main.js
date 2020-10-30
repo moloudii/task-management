@@ -41,22 +41,36 @@ $(document).ready(function () {
 
 
 // --------------------------------------------------------
+// ------------ Begin Start Time -----------
+// --------------------------
+function startTime(ha){
+    let nextStart = ha.nextElementSibling;
+    let nowTime = new Date(); 
+    let startTime = (nowTime.getMonth()+1)+"-"+nowTime.getDate()+ "  " + nowTime.getHours() + ":" + nowTime.getMinutes();
+    nextStart.innerHTML = startTime;
+}
+// --------------------------------------------------------
+// ------------ End Start Time -------------
+// --------------------------
+
+
+// --------------------------------------------------------
 // ------------ Begin Drop Down ------------
 // --------------------------
 
-function allowDrop(ev) {
-    ev.preventDefault();
-}
+// function allowDrop(ev) {
+//     ev.preventDefault();
+// }
 
-function dragCardTask(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
+// function dragCardTask(ev) {
+//     ev.dataTransfer.setData("text", ev.target.id);
+// }
 
-function dropCardTask(ev) {
-    ev.preventDefault();
-    let data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
+// function dropCardTask(ev) {
+//     ev.preventDefault();
+//     let data = ev.dataTransfer.getData("text");
+//     ev.target.appendChild(document.getElementById(data));
+// }
 
 // --------------------------------------------------------
 // -------------- End Drop Down ------------
@@ -112,6 +126,7 @@ function createNewTask(){
     operationCardTask.setAttribute("class" , "operation-card-task");
     let divStart = document.createElement('div');
     divStart.setAttribute("class" , "start"); 
+    divStart.setAttribute("onclick" , "startTime(this)");
     let iconStart = document.createElement('i');
     iconStart.setAttribute("class" , "fa fa-play");
     let spanStart = document.createElement('span');
@@ -119,10 +134,6 @@ function createNewTask(){
     spanStart.style.marginLeft = "0.3em";
     let divStartTime = document.createElement('div');
     divStartTime.setAttribute("class" , "start-time");
-    let spanStartTime = document.createElement('span');
-    // ------------ Set variable for start time-------
-    spanStartTime.innerHTML = "10:45 AM";
-    // ----------------------------------------------- 
     let divUser = document.createElement('div');
     divUser.setAttribute("class" , "user");
     let iUser = document.createElement('i');
@@ -134,7 +145,6 @@ function createNewTask(){
     divStart.appendChild(iconStart);
     divStart.appendChild(spanStart);
     operationCardTask.appendChild(divStart);
-    divStartTime.appendChild(spanStartTime);
     operationCardTask.appendChild(divStartTime);
     divUser.appendChild(iUser);
     operationCardTask.appendChild(divUser);
