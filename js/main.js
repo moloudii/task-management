@@ -17,6 +17,20 @@ function fixedHeader() {
 // -------------- End Fixed Header ---------
 // --------------------------
 
+// --------------------------------------------------------
+// -------------- Begin Get Date Now -------
+// --------------------------
+function getDateNow(){
+    let divDate = document.getElementById('date');
+    let nowDate = new Date();
+    let readyTime = (nowDate.getMonth()+1)+"/"+nowDate.getDate()+"/"+nowDate.getFullYear();
+    divDate.innerHTML = readyTime;
+
+}
+// --------------------------------------------------------
+// -------------- End Get Date Now ---------
+// --------------------------
+
 
 // --------------------------------------------------------
 // ------------ Begin Scrolling Link -------
@@ -43,14 +57,69 @@ $(document).ready(function () {
 // --------------------------------------------------------
 // ------------ Begin Start Time -----------
 // --------------------------
-function startTime(ha){
-    let nextStart = ha.nextElementSibling;
+function startTime(self){
+    let nextStart = self.nextElementSibling;
     let nowTime = new Date(); 
     let startTime = (nowTime.getMonth()+1)+"-"+nowTime.getDate()+ "  " + nowTime.getHours() + ":" + nowTime.getMinutes();
     nextStart.innerHTML = startTime;
 }
 // --------------------------------------------------------
 // ------------ End Start Time -------------
+// --------------------------
+
+
+// --------------------------------------------------------
+// ------------ Begin Edit Task ------------
+// --------------------------
+let editTaskCounter = 0;
+function editTask(selfDivText){
+    if (editTaskCounter === 0) {
+        let h4Text = selfDivText.querySelector("h4").innerHTML;
+        let pText = selfDivText.querySelector("p").innerHTML;
+        selfDivText.innerHTML = '';
+        let createForm = document.createElement("form");
+        createForm.setAttribute("action" , "#");
+        createForm.setAttribute("onsubmit" , "saveEdit(this)");
+        let createTextareaName = document.createElement("textarea");
+        createTextareaName.innerHTML = h4Text;
+        let createTextarea = document.createElement("textarea");
+        createTextarea.innerHTML = pText;
+        let createButton = document.createElement("input");
+        createButton.setAttribute("type" , "submit");
+        createButton.setAttribute("value" , "Save")
+
+        createForm.appendChild(createTextareaName);
+        createForm.appendChild(createTextarea);
+        createForm.appendChild(createButton);
+        selfDivText.appendChild(createForm);
+        selfDivText.querySelector("textarea").focus();
+        selfDivText.querySelector("textarea").select();
+        editTaskCounter = 1;
+    }else{
+        alert("Please Save or Back Edit");
+    }
+}
+
+function saveEdit(inputEdit){
+    let valueForm = inputEdit.querySelectorAll("textarea");
+    let nameTaskEdit = valueForm[0].value;
+    let descriptionTask = valueForm[1].value;
+    let father = inputEdit.parentElement;
+    father.innerHTML = '';
+    let createH4 = document.createElement("h4");
+    createH4.setAttribute("class" , "title-task");
+    createH4.innerHTML = nameTaskEdit;
+    let createP = document.createElement("p");
+    createP.setAttribute("class" , "description-task");
+    createP.innerHTML = descriptionTask;
+
+    father.appendChild(createH4);
+    father.appendChild(createP);
+
+    editTaskCounter = 0;
+}
+// --------------------------------------------------------
+// ------------ End Edit Task --------------
 // --------------------------
 
 
@@ -91,13 +160,13 @@ function showPopup(nameTask) {
     popup.style.display = "grid";
     titlePopup.innerHTML = "Create New Task " + nameTask;
     document.getElementById('name-new-task').value='';
+    document.getElementById('description-new-task').value="";
     createTask.style.display = "block";
     successful.style.display = "none";
     document.getElementById('name-new-task').focus();
 
     // to find div father button 
     divTasks = document.getElementById(`${nameTask}`);
-    console.log(divTasks);
 }
 
 function createNewTask(){
@@ -116,6 +185,8 @@ function createNewTask(){
     cardTask.setAttribute("class" , "card-task");
     let textCardTask = document.createElement('div');
     textCardTask.setAttribute("class" , "text-card-task");
+    textCardTask.setAttribute("ondblclick" , "editTask(this)");
+    textCardTask.setAttribute("title" , "double click for edit");
     let h4TitleTask = document.createElement('h4');
     h4TitleTask.setAttribute("class" , "title-task");
     h4TitleTask.innerHTML = nameNewTask;

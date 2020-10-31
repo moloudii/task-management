@@ -217,7 +217,7 @@ body{
                             background-color: $WHITE;
                             box-shadow      : 0em 0.2em 1em $SILVER;
                             margin          : 0.7em;
-                            cursor          : pointer;
+                            // cursor          : pointer;
                             .text-card-task{
                                 // min-height  : 8em;
                                 padding     : 0.5em 1em;
@@ -231,6 +231,33 @@ body{
                                     color       : $ASBESTOS;
                                     line-height : 1.7;
                                     margin-top  : 0.5em;
+                                }
+                                textarea{
+                                    display         : block;
+                                    font-size       : 1.1em;
+                                    width           : 100%;
+                                    padding         : 0.3em;
+                                    margin-bottom   : 1em;
+                                    resize          : none;
+                                    line-height     : 1.5;
+                                    &:nth-child(2){
+                                        height: 6em;
+                                    }
+                                }
+                                input{
+                                    width           : 100%;
+                                    padding         : 0.5em;
+                                    border          : none;
+                                    color           : $WHITE;
+                                    font-size       : 1em;
+                                    border-radius   : 0.3em;
+                                    cursor          : pointer;
+                                    transition      : all 0.3s;
+                                    background-image: linear-gradient(46deg , #5bff4d , #0c7be2);
+                                    &:hover{
+                                        box-shadow          : 0em 0em 0.5em #5e68f7;
+                                        transform           : scale(1.02);
+                                    }
                                 }
                             }//text-card-task
                             .operation-card-task{
@@ -246,6 +273,7 @@ body{
                                     font-size   : 1.1em;
                                     float       : left;
                                     margin-top  : 0.2em;
+                                    cursor      : pointer;
                                 }
                                 .start-time{
                                     line-height : 1.5;
