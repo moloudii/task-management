@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body onload="getDateNow()">
 
     <div class="task-page row">
         <div class="user-date col-xl-12 col-lg-12 col-sm-12">
@@ -17,7 +17,7 @@
                 <i class="fa fa-user icon-user"></i>
                 <span class="name-user">mohammad moloudi</span>
             </div>
-            <div class="date">10/25/2001</div>
+            <div class="date" id="date"></div>
         </div>
 
         <div class="shortcut">
@@ -32,14 +32,11 @@
                     <div class="header-column-day" id="header-column-day">
                         <h3>Day</h3>
                     </div>
-                    <div class="task-card-section" id="Day" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
+                    <div class="task-card-section" id="Day">
                         <div class="card-task">
-                            <div class="text-card-task">
+                            <div class="text-card-task" ondblclick="editTask(this)" title="double click for edit">
                                 <h4 class="title-task">Name Task</h4>
-                                <p class="description-task">
-                                    Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit. Minima .
-                                </p>
+                                <p class="description-task">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Minima .</p>
                             </div>
                             <div class="operation-card-task">
                                 <div class="start" onclick="startTime(this)">
@@ -55,12 +52,9 @@
                             </div>
                         </div>
                         <div class="card-task">
-                            <div class="text-card-task">
+                            <div class="text-card-task" ondblclick="editTask(this)" title="double click for edit">
                                 <h4 class="title-task">Name Task</h4>
-                                <p class="description-task">
-                                    Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit. Minima .
-                                </p>
+                                <p class="description-task">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Minima .</p>
                             </div>
                             <div class="operation-card-task">
                                 <div class="start" onclick="startTime(this)">
@@ -76,12 +70,9 @@
                             </div>
                         </div>
                         <div class="card-task">
-                            <div class="text-card-task">
+                            <div class="text-card-task" ondblclick="editTask(this)" title="double click for edit">
                                 <h4 class="title-task">Name Task</h4>
-                                <p class="description-task">
-                                    Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit. Minima .
-                                </p>
+                                <p class="description-task">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Minima .</p>
                             </div>
                             <div class="operation-card-task">
                                 <div class="start" onclick="startTime(this)">
@@ -97,12 +88,9 @@
                             </div>
                         </div>
                         <div class="card-task">
-                            <div class="text-card-task">
+                            <div class="text-card-task" ondblclick="editTask(this)" title="double click for edit">
                                 <h4 class="title-task">Name Task</h4>
-                                <p class="description-task">
-                                    Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit. Minima .
-                                </p>
+                                <p class="description-task">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Minima .</p>
                             </div>
                             <div class="operation-card-task">
                                 <div class="start" onclick="startTime(this)">
@@ -129,15 +117,12 @@
                     <div class="header-column-week" id="header-column-week">
                         <h3>Week</h3>
                     </div>
-                    <div class="task-card-section" id="Week" ondrop="dropCardTask(event)" ondragover="allowDrop(event)">
+                    <div class="task-card-section" id="Week">
                         <span class="split-date sunday"></span>
                         <div class="card-task">
-                            <div class="text-card-task">
+                            <div class="text-card-task" ondblclick="editTask(this)" title="double click for edit">
                                 <h4 class="title-task">Name Task</h4>
-                                <p class="description-task">
-                                    Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit. Minima .
-                                </p>
+                                <p class="description-task">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Minima .</p>
                             </div>
                             <div class="operation-card-task">
                                 <div class="start" onclick="startTime(this)">
@@ -165,16 +150,12 @@
                     <div class="header-column-month" id="header-column-month">
                         <h3>Month</h3>
                     </div>
-                    <div class="task-card-section" id="Month" ondrop="dropCardTask(event)"
-                        ondragover="allowDrop(event)">
+                    <div class="task-card-section" id="Month">
                         <span class="split-date second-week"></span>
                         <div class="card-task">
-                            <div class="text-card-task">
+                            <div class="text-card-task" ondblclick="editTask(this)" title="double click for edit">
                                 <h4 class="title-task">Name Task</h4>
-                                <p class="description-task">
-                                    Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit. Minima .
-                                </p>
+                                <p class="description-task">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Minima .</p>
                             </div>
                             <div class="operation-card-task">
                                 <div class="start" onclick="startTime(this)">
@@ -192,12 +173,9 @@
                         <span class="split-date second-week"></span>
 
                         <div class="card-task">
-                            <div class="text-card-task">
-                                <h4 class="title-task">Name Task</h4>
-                                <p class="description-task">
-                                    Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit. Minima .
-                                </p>
+                            <div class="text-card-task" ondblclick="editTask(this)" title="double click for edit">
+                                <h4 class="title-task">Name Task has mohmmad moloudi</h4>
+                                <p class="description-task">Lorem ipsum dolor sit amet,consectetur adipisicing elit .</p>
                             </div>
                             <div class="operation-card-task">
                                 <div class="start" onclick="startTime(this)">
