@@ -232,33 +232,51 @@ body{
                                     line-height : 1.7;
                                     margin-top  : 0.5em;
                                 }
-                                textarea{
-                                    display         : block;
-                                    font-size       : 1.1em;
-                                    width           : 100%;
-                                    padding         : 0.3em;
-                                    margin-bottom   : 1em;
-                                    resize          : none;
-                                    line-height     : 1.5;
-                                    &:nth-child(2){
-                                        height: 6em;
+                                form{
+                                    text-align: center;
+                                    textarea{
+                                        display         : block;
+                                        font-size       : 1.1em;
+                                        width           : 100%;
+                                        padding         : 0.3em;
+                                        margin-bottom   : 1em;
+                                        resize          : none;
+                                        line-height     : 1.5;
+                                        &:nth-child(2){
+                                            height: 6em;
+                                        }
+                                    }
+                                    input{
+                                        width           : 48%;
+                                        padding         : 0.5em;
+                                        border          : none;
+                                        color           : $WHITE;
+                                        font-size       : 1em;
+                                        border-radius   : 0.3em;
+                                        cursor          : pointer;
+                                        transition      : all 0.3s;
+                                        @include mini_mobile{
+                                            width       : 45%;
+                                            font-size   : 0.9em;
+                                        }
+                                        &:nth-child(odd){
+                                            background-image: linear-gradient(46deg , #5bff4d , #0c7be2);
+                                            margin-right    : 0.5em;
+                                            &:hover{
+                                                box-shadow          : 0em 0em 0.5em #5e68f7;
+                                                transform           : scale(1.02);
+                                            }   
+                                        }
+                                        &:nth-child(even){
+                                            background-image: linear-gradient(46deg , #df9151 , #c20000);
+                                            &:hover{
+                                                box-shadow          : 0em 0em 0.5em #df9151;
+                                                transform           : scale(1.02);
+                                            }   
+                                        }
                                     }
                                 }
-                                input{
-                                    width           : 100%;
-                                    padding         : 0.5em;
-                                    border          : none;
-                                    color           : $WHITE;
-                                    font-size       : 1em;
-                                    border-radius   : 0.3em;
-                                    cursor          : pointer;
-                                    transition      : all 0.3s;
-                                    background-image: linear-gradient(46deg , #5bff4d , #0c7be2);
-                                    &:hover{
-                                        box-shadow          : 0em 0em 0.5em #5e68f7;
-                                        transform           : scale(1.02);
-                                    }
-                                }
+                                
                             }//text-card-task
                             .operation-card-task{
                                 width       : 100%;

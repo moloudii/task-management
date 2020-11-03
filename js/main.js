@@ -38,12 +38,12 @@ function getDateNow(){
 
 $(document).ready(function () {
     $('a[href*="#"]').on('click', function (e) {
-        e.preventDefault()
+        e.preventDefault(),
 
         $('html, body').animate({
                 scrollTop: $($(this).attr('href')).offset().top - 170,
             },
-            200,
+            800,
             'linear'
         )
     });
@@ -84,19 +84,32 @@ function editTask(selfDivText){
         createTextareaName.innerHTML = h4Text;
         let createTextarea = document.createElement("textarea");
         createTextarea.innerHTML = pText;
+        createTextarea.addEventListener("click" , function(event){
+            this.select();
+        });
         let createButton = document.createElement("input");
         createButton.setAttribute("type" , "submit");
-        createButton.setAttribute("value" , "Save")
+        createButton.setAttribute("value" , "Save");
+        let createButtonBack = document.createElement("input");
+        createButtonBack.setAttribute("type" , "button");
+        createButtonBack.setAttribute("value" , "Cancel");
+        createButtonBack.setAttribute("onclick" , "cancelEdit(this)");
 
         createForm.appendChild(createTextareaName);
         createForm.appendChild(createTextarea);
         createForm.appendChild(createButton);
+        createForm.appendChild(createButtonBack);
         selfDivText.appendChild(createForm);
         selfDivText.querySelector("textarea").focus();
         selfDivText.querySelector("textarea").select();
         editTaskCounter = 1;
+
+        // save data for create back Button
+        valueH4Text = h4Text;
+        valuePText = pText;
     }else{
-        alert("Please Save or Back Edit");
+        // alert("Please Save or Back Edit");
+        editTask.preventDefault();
     }
 }
 
@@ -118,6 +131,24 @@ function saveEdit(inputEdit){
 
     editTaskCounter = 0;
 }
+
+function cancelEdit(inputCancel){
+    let father = inputCancel.parentElement.parentElement;
+    father.innerHTML = '';
+    let createH4 = document.createElement("h4");
+    createH4.setAttribute("class" , "title-task");
+    createH4.innerHTML = valueH4Text;
+    let createP = document.createElement("p");
+    createP.setAttribute("class" , "description-task");
+    createP.innerHTML = valuePText;
+    
+    father.appendChild(createH4);
+    father.appendChild(createP);
+    console.log(valuePText);
+    console.log(valueH4Text);
+    editTaskCounter = 0;
+}
+
 // --------------------------------------------------------
 // ------------ End Edit Task --------------
 // --------------------------
