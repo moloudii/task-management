@@ -58,13 +58,39 @@ $(document).ready(function () {
 // ------------ Begin Start Time -----------
 // --------------------------
 function startTime(self){
+    let iconChange = self.getElementsByTagName("i")[0];
+    iconChange.classList.remove("fa-play");
+    iconChange.classList.add("fa-pause");
+    let textChange = self.getElementsByTagName("span")[0];
+    textChange.innerHTML = "Pause";
+    self.setAttribute("onclick" , "stopTime(this)");
     let nextStart = self.nextElementSibling;
     let nowTime = new Date(); 
-    let startTime = (nowTime.getMonth()+1)+"-"+nowTime.getDate()+ "  " + nowTime.getHours() + ":" + nowTime.getMinutes();
+    let startTime = (nowTime.getMonth()+1)+"-"+nowTime.getDate()+ "  " + nowTime.getHours() + ":" + nowTime.getMinutes()+`<sub>(Start)</sub>`;
     nextStart.innerHTML = startTime;
 }
 // --------------------------------------------------------
 // ------------ End Start Time -------------
+// --------------------------
+
+
+// --------------------------------------------------------
+// ------------ Begin Stop Time ------------
+// --------------------------
+function stopTime(self){
+    let iconChange = self.getElementsByTagName("i")[0];
+    iconChange.classList.remove("fa-pause");
+    iconChange.classList.add("fa-play");
+    let textChange = self.getElementsByTagName("span")[0];
+    textChange.innerHTML = "Stop";
+    self.setAttribute("onclick" , "startTime(this)");
+    let nextStop = self.nextElementSibling;
+    let nowTime = new Date(); 
+    let stopTime = (nowTime.getMonth()+1)+"-"+nowTime.getDate()+ "  " + nowTime.getHours() + ":" + nowTime.getMinutes()+`<sub>(Pause)</sub>`;
+    nextStop.innerHTML = stopTime;
+}
+// --------------------------------------------------------
+// ------------ End Stop Time --------------
 // --------------------------
 
 
@@ -144,8 +170,7 @@ function cancelEdit(inputCancel){
     
     father.appendChild(createH4);
     father.appendChild(createP);
-    console.log(valuePText);
-    console.log(valueH4Text);
+
     editTaskCounter = 0;
 }
 
