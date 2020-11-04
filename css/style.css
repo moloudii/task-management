@@ -8388,8 +8388,8 @@ body .task-page .columns-section .keeper .column-task .header-column-month h3 {
 }
 /* line 209, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .task-card-section {
-  height: 87%;
-  overflow-y: scroll;
+  max-height: 87%;
+  overflow-y: auto;
   border: 1px solid rgba(189, 195, 199, 0.5);
 }
 /* line 213, ../scss/modules/_index.scss */
@@ -8596,8 +8596,9 @@ body .task-page .columns-section .keeper .column-task .footer-column {
   border: 1px solid rgba(189, 195, 199, 0.5);
   border-top: none;
   padding: 0.7em;
+  border-radius: 0em 0em 0.5em 0.5em;
 }
-/* line 419, ../scss/modules/_index.scss */
+/* line 420, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card {
   width: 7em;
   height: 2em;
@@ -8608,38 +8609,38 @@ body .task-page .columns-section .keeper .column-task .footer-column .add-card {
   color: white;
   transition: all 0.3s;
 }
-/* line 428, ../scss/modules/_index.scss */
+/* line 429, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card:focus {
   outline: none;
 }
-/* line 430, ../scss/modules/_index.scss */
+/* line 431, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card-day {
   background-image: linear-gradient(64deg, #99d0fb, #4c8ac7);
 }
-/* line 432, ../scss/modules/_index.scss */
+/* line 433, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card-day:hover {
   background-image: linear-gradient(64deg, #46aaf7, #2678c9);
   box-shadow: 0em 0.2em 1em #99d0fb;
 }
-/* line 437, ../scss/modules/_index.scss */
+/* line 438, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card-week {
   background-image: linear-gradient(64deg, #f599fb, #9e0aac);
 }
-/* line 439, ../scss/modules/_index.scss */
+/* line 440, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card-week:hover {
   background-image: linear-gradient(64deg, #f064fa, #64016d);
   box-shadow: 0em 0.2em 1em #f064fa;
 }
-/* line 444, ../scss/modules/_index.scss */
+/* line 445, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card-month {
   background-image: linear-gradient(64deg, #999ffb, #0a0a9f);
 }
-/* line 446, ../scss/modules/_index.scss */
+/* line 447, ../scss/modules/_index.scss */
 body .task-page .columns-section .keeper .column-task .footer-column .add-card-month:hover {
   background-image: linear-gradient(64deg, #5e68f7, #040466);
   box-shadow: 0em 0.2em 1em #5e68f7;
 }
-/* line 456, ../scss/modules/_index.scss */
+/* line 457, ../scss/modules/_index.scss */
 body .popup {
   position: fixed;
   top: 0em;
@@ -8653,46 +8654,46 @@ body .popup {
   background-color: rgba(94, 94, 244, 0.7);
 }
 @media screen and (max-width: 40em) {
-  /* line 456, ../scss/modules/_index.scss */
+  /* line 457, ../scss/modules/_index.scss */
   body .popup {
     background-color: rgba(94, 94, 244, 0.9);
   }
 }
-/* line 470, ../scss/modules/_index.scss */
+/* line 471, ../scss/modules/_index.scss */
 body .popup .create-task {
   width: 25em;
   color: white;
 }
 @media screen and (max-width: 25em) {
-  /* line 470, ../scss/modules/_index.scss */
+  /* line 471, ../scss/modules/_index.scss */
   body .popup .create-task {
     width: 85%;
   }
-  /* line 475, ../scss/modules/_index.scss */
+  /* line 476, ../scss/modules/_index.scss */
   body .popup .create-task h1 {
     font-size: 1.5em !important;
   }
-  /* line 478, ../scss/modules/_index.scss */
+  /* line 479, ../scss/modules/_index.scss */
   body .popup .create-task span {
     font-size: 1em !important;
   }
-  /* line 481, ../scss/modules/_index.scss */
+  /* line 482, ../scss/modules/_index.scss */
   body .popup .create-task input, body .popup .create-task textarea {
     font-size: 1em !important;
   }
 }
-/* line 485, ../scss/modules/_index.scss */
+/* line 486, ../scss/modules/_index.scss */
 body .popup .create-task h1 {
   text-align: center;
   line-height: 2;
   margin-bottom: 1.5em;
   font-size: 2em;
 }
-/* line 491, ../scss/modules/_index.scss */
+/* line 492, ../scss/modules/_index.scss */
 body .popup .create-task span {
   font-size: 1.1em;
 }
-/* line 494, ../scss/modules/_index.scss */
+/* line 495, ../scss/modules/_index.scss */
 body .popup .create-task input {
   width: 100%;
   padding: 0.5em;
@@ -8701,7 +8702,7 @@ body .popup .create-task input {
   border: none;
   margin: 0.5em 0em 1.5em;
 }
-/* line 502, ../scss/modules/_index.scss */
+/* line 503, ../scss/modules/_index.scss */
 body .popup .create-task textarea {
   width: 100%;
   margin: 0.5em 0em 1.5em;
@@ -8709,7 +8710,7 @@ body .popup .create-task textarea {
   border: none;
   border-radius: 0.3em;
 }
-/* line 509, ../scss/modules/_index.scss */
+/* line 510, ../scss/modules/_index.scss */
 body .popup .create-task button, body .popup .create-task input[type="submit"] {
   width: 100%;
   padding: 0.5em;
@@ -8721,29 +8722,29 @@ body .popup .create-task button, body .popup .create-task input[type="submit"] {
   border-radius: 0.3em;
   transition: all 0.4s;
 }
-/* line 519, ../scss/modules/_index.scss */
+/* line 520, ../scss/modules/_index.scss */
 body .popup .create-task button:hover, body .popup .create-task input[type="submit"]:hover {
   box-shadow: 0em 0.2em 1em #f064fa;
   transform: scale(1.02);
 }
-/* line 523, ../scss/modules/_index.scss */
+/* line 524, ../scss/modules/_index.scss */
 body .popup .create-task button:focus, body .popup .create-task input[type="submit"]:focus {
   outline: none;
 }
-/* line 526, ../scss/modules/_index.scss */
+/* line 527, ../scss/modules/_index.scss */
 body .popup .answer-create-task, body .popup .successful-answer-create-task, body .popup .unsuccessful-answer-create-task {
   width: 25em;
   display: none;
   text-align: center;
 }
-/* line 530, ../scss/modules/_index.scss */
+/* line 531, ../scss/modules/_index.scss */
 body .popup .answer-create-task h2, body .popup .successful-answer-create-task h2, body .popup .unsuccessful-answer-create-task h2 {
   line-height: 2;
   font-size: 1.5em;
   color: white;
   margin-bottom: 1em;
 }
-/* line 536, ../scss/modules/_index.scss */
+/* line 537, ../scss/modules/_index.scss */
 body .popup .answer-create-task button, body .popup .successful-answer-create-task button, body .popup .unsuccessful-answer-create-task button {
   width: 100%;
   padding: 0.5em;
@@ -8754,28 +8755,28 @@ body .popup .answer-create-task button, body .popup .successful-answer-create-ta
   border-radius: 0.3em;
   transition: all 0.4s;
 }
-/* line 545, ../scss/modules/_index.scss */
+/* line 546, ../scss/modules/_index.scss */
 body .popup .answer-create-task button:focus, body .popup .successful-answer-create-task button:focus, body .popup .unsuccessful-answer-create-task button:focus {
   outline: none;
 }
-/* line 550, ../scss/modules/_index.scss */
+/* line 551, ../scss/modules/_index.scss */
 body .popup .successful-answer-create-task button {
   background-image: linear-gradient(64deg, #37e654, #046604);
 }
-/* line 552, ../scss/modules/_index.scss */
+/* line 553, ../scss/modules/_index.scss */
 body .popup .successful-answer-create-task button:hover {
   box-shadow: 0em 0.2em 1em #139b1e;
   transform: scale(1.02);
 }
-/* line 559, ../scss/modules/_index.scss */
+/* line 560, ../scss/modules/_index.scss */
 body .popup .unsuccessful-answer-create-task h2 {
   color: #9b1313;
 }
-/* line 563, ../scss/modules/_index.scss */
+/* line 564, ../scss/modules/_index.scss */
 body .popup .unsuccessful-answer-create-task button {
   background-image: linear-gradient(64deg, #e63737, #660404);
 }
-/* line 565, ../scss/modules/_index.scss */
+/* line 566, ../scss/modules/_index.scss */
 body .popup .unsuccessful-answer-create-task button:hover {
   box-shadow: 0em 0.2em 1em #9b1313;
   transform: scale(1.02);

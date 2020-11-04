@@ -207,8 +207,8 @@ body{
                         }
                     }//header-column-month
                     .task-card-section{
-                        height      : 87%;
-                        overflow-y  : scroll;
+                        max-height  : 87%;
+                        overflow-y  : auto;
                         border      : 1px solid rgba($color: $SILVER, $alpha: 0.5);
                         .card-task{
                             // width: 100%;
@@ -411,11 +411,12 @@ body{
                     }
 
                     .footer-column{
-                        width       : 100%;
-                        height      : 3.5em;
-                        border      : 1px solid rgba($color: $SILVER, $alpha: 0.5);
-                        border-top  : none;
-                        padding     : 0.7em;
+                        width           : 100%;
+                        height          : 3.5em;
+                        border          : 1px solid rgba($color: $SILVER, $alpha: 0.5);
+                        border-top      : none;
+                        padding         : 0.7em;
+                        border-radius   : 0em 0em 0.5em 0.5em;
                         .add-card{
                             width           : 7em;
                             height          : 2em;
